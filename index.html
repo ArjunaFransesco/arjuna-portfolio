@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjuna Fransesco — Data Scientist & ML Engineer</title>
+  <meta name="description" content="Portfolio resmi Arjuna Fransesco - Mahasiswa D3 Manajemen Informatika Polinema, Data Science, Machine Learning, dan Software Development.">
+  
+  <!-- Website Logo & Favicon (Solid Minimalist AF) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23007AFF'/%3E%3Ctext x='32' y='43' font-family='sans-serif' font-size='28' font-weight='900' text-anchor='middle' fill='%23FFFFFF' letter-spacing='-1.5'%3EAF%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome & Lucide Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ios: {
+              blue: '#007AFF',
+              purple: '#5856D6',
+              cyan: '#32ADE6',
+              green: '#34C759',
+              orange: '#FF9500',
+              pink: '#FF2D55',
+              indigo: '#5E5CE6',
+              glass: 'rgba(255, 255, 255, 0.08)',
+              glassDark: 'rgba(18, 18, 22, 0.65)',
+              glassBorder: 'rgba(255, 255, 255, 0.12)',
+              glassBorderLight: 'rgba(255, 255, 255, 0.25)',
+            }
+          },
+          animation: {
+            'blob': 'blob 14s infinite ease-in-out',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'spin-slow': 'spin 20s linear infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+          },
+          keyframes: {
+            blob: {
+              '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(40px, -60px) scale(1.15)' },
+              '66%': { transform: 'translate(-30px, 30px) scale(0.9)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* iOS Glassmorphic Styles */
+    .ios-glass {
+      background: rgba(22, 23, 30, 0.65);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+
+    .ios-glass-card {
+      background: rgba(28, 30, 40, 0.55);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .ios-glass-card:hover {
+      background: rgba(35, 38, 52, 0.75);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 25px 50px -10px rgba(0, 122, 255, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      transform: translateY(-4px) scale(1.01);
+    }
+
+    .ios-glass-nav {
+      background: rgba(18, 19, 26, 0.75);
+      backdrop-filter: blur(32px) saturate(200%);
+      -webkit-backdrop-filter: blur(32px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d0e12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Liquid Gradient Text */
+    .text-liquid-gradient {
+      background: linear-gradient(135deg, #FFFFFF 20%, #A5C9FF 60%, #90A4FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-accent-gradient {
+      background: linear-gradient(135deg, #007AFF 0%, #5856D6 50%, #FF2D55 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Interactive Spotlight hover */
+    .spotlight-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      top: var(--mouse-y, 50%);
+      left: var(--mouse-x, 50%);
+      transform: translate(-50%, -50%);
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(0, 122, 255, 0.18), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    .skill-pill {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #E2E8F0;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .skill-pill:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #FFFFFF;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-[#090A0F] text-slate-100 min-h-screen selection:bg-ios-blue selection:text-white font-sans relative overflow-x-hidden">
+
+  <!-- Ambient Dynamic Lighting Orbs (iOS Depth Glow) -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div id="orb1" class="absolute -top-32 left-1/4 w-[550px] h-[550px] bg-blue-600/20 rounded-full blur-[130px] animate-blob"></div>
+    <div id="orb2" class="absolute top-1/3 -right-20 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[140px] animate-blob animation-delay-2000"></div>
+    <div id="orb3" class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-cyan-600/15 rounded-full blur-[120px] animate-blob animation-delay-4000"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,10,15,0.85)_100%)]"></div>
+  </div>
+
+  <!-- iOS Dynamic Island Header -->
+  <header class="fixed top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300">
+    <div id="dynamicIsland" class="ios-glass px-5 py-2.5 rounded-full flex items-center gap-4 cursor-pointer hover:scale-[1.03] transition-all duration-300 shadow-2xl border border-white/20 group">
+      <!-- Logo & Status Indicator -->
+      <div class="flex items-center gap-2.5">
+        <div class="w-6 h-6 rounded-lg bg-[#007AFF] shadow-sm flex items-center justify-center">
+          <span class="text-[10px] font-black tracking-tighter text-white font-sans">AF</span>
+        </div>
+        <span class="text-xs font-semibold tracking-wide text-slate-200">Arjuna Fransesco</span>
+      </div>
+
+      <div class="h-3 w-[1px] bg-white/20"></div>
+
+      <!-- Live Clock -->
+      <div id="islandClock" class="font-mono text-xs text-slate-300 font-medium">00:00:00</div>
+
+      <div class="h-3 w-[1px] bg-white/20"></div>
+
+      <!-- Focus Tag -->
+      <div class="flex items-center gap-1.5 text-xs text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full font-medium border border-blue-500/20">
+        <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+        <span>Data Science</span>
+      </div>
+
+      <!-- Quick Audio Feedback Toggle -->
+      <button id="soundToggle" onclick="toggleAudio(event)" title="Toggle Haptic Sound" class="text-slate-400 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10">
+        <i id="soundIcon" class="fa-solid fa-volume-high text-xs"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-36 space-y-24">
+
+    <!-- HERO SECTION: iOS Vision Pro style Glass Card -->
+    <section id="hero" class="relative">
+      <div class="ios-glass rounded-3xl p-8 sm:p-12 md:p-16 border border-white/15 relative overflow-hidden">
+        <!-- Inner Specular Light -->
+        <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left: Hero Text & Badges -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-md">
+              <i class="fa-solid fa-graduation-cap text-blue-400"></i>
+              <span class="text-xs font-semibold text-slate-300 tracking-wide uppercase">Politeknik Negeri Malang • IPK 3.83</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-liquid-gradient">
+              Engineering Intelligent Systems with <span class="text-accent-gradient">Data & Code.</span>
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+              Halo! Saya <span class="text-white font-semibold">Arjuna Fransesco</span>, mahasiswa Manajemen Informatika yang berfokus pada <span class="text-blue-400 font-medium">Data Science</span>, <span class="text-purple-400 font-medium">Machine Learning</span>, dan <span class="text-cyan-400 font-medium">Full Stack Development</span>. Berpengalaman membangun pipeline data end-to-end, evaluasi model prediktif, serta sistem informasi modern.
+            </p>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="#projects" onclick="playClick()" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold shadow-lg shadow-blue-500/25 transition-all duration-200 flex items-center gap-2 group border border-white/20">
+                <i class="fa-solid fa-folder-open text-sm transition-transform group-hover:scale-110"></i>
+                <span>Jelajahi Proyek</span>
+              </a>
+
+              <a href="#interactive-lab" onclick="playClick()" class="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/15 text-slate-100 font-semibold backdrop-blur-md transition-all duration-200 flex items-center gap-2 border border-white/15 hover:border-white/30">
+                <i class="fa-solid fa-terminal text-sm text-cyan-400"></i>
+                <span>Interactive ML Playground</span>
+              </a>
+
+              <!-- GitHub Button with crisp SVG icon -->
+              <a href="https://github.com/ArjunaFransesco" target="_blank" onclick="playClick()" class="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/15 text-slate-100 font-semibold border border-white/20 flex items-center gap-2.5 transition-all shadow-md">
+                <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+
+              <!-- LinkedIn Button with crisp SVG icon -->
+              <a href="https://www.linkedin.com/in/arjunafransesco" target="_blank" onclick="playClick()" class="px-5 py-3 rounded-2xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 font-semibold border border-blue-500/30 flex items-center gap-2.5 transition-all shadow-md">
+                <svg class="w-5 h-5 fill-current text-[#0A66C2]" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+
+            <!-- Contact Quick Pills -->
+            <div class="pt-4 flex flex-wrap gap-3 text-xs text-slate-400 font-mono">
+              <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/5">
+                <i class="fa-solid fa-location-dot text-rose-400"></i>
+                <span>Kediri, Jawa Timur</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/5">
+                <i class="fa-solid fa-envelope text-amber-400"></i>
+                <span>arjunafransesco1@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/5">
+                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                <span>+62 877-5346-2865</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Profile Glass Card (iOS Widget style) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-sm ios-glass-card rounded-3xl p-6 relative group overflow-hidden spotlight-card">
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-purple-600 p-[2px] shadow-lg">
+                    <div class="w-full h-full bg-[#12131A] rounded-2xl flex items-center justify-center font-bold text-lg text-white">
+                      AF
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-white text-base">Arjuna Fransesco</h3>
+                    <p class="text-xs text-slate-400 font-mono">Data Science Specialist</p>
+                  </div>
+                </div>
+                <div class="p-2 rounded-xl bg-white/5 text-blue-400 border border-white/10">
+                  <i class="fa-solid fa-circle-check text-base"></i>
+                </div>
+              </div>
+
+              <!-- Quick Metrics Grid -->
+              <div class="grid grid-cols-2 gap-3 py-5">
+                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
+                  <span class="text-xs text-slate-400 font-medium">Akademik IPK</span>
+                  <div class="text-2xl font-extrabold text-blue-400">3.83<span class="text-xs text-slate-400 font-normal">/4.00</span></div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
+                  <span class="text-xs text-slate-400 font-medium">SMAN 2 Kediri</span>
+                  <div class="text-2xl font-extrabold text-purple-400">93.0<span class="text-xs text-slate-400 font-normal"> Nilai</span></div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
+                  <span class="text-xs text-slate-400 font-medium">Sertifikasi AWS</span>
+                  <div class="text-lg font-bold text-emerald-400 flex items-center gap-1.5">
+                    <i class="fa-brands fa-aws text-amber-400"></i> Certified
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
+                  <span class="text-xs text-slate-400 font-medium">Career Focus</span>
+                  <div class="text-lg font-bold text-cyan-400">Data & ML</div>
+                </div>
+              </div>
+
+              <!-- Live Status Pill -->
+              <div class="p-3 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 flex items-center justify-between text-xs">
+                <span class="text-slate-300">Open for Collaboration & Roles</span>
+                <span class="flex items-center gap-1.5 text-emerald-400 font-semibold font-mono">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Available
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE ML LAB & TERMINAL SECTION -->
+    <section id="interactive-lab" class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-400 mb-1">
+            <i class="fa-solid fa-microchip"></i> Interactive Widgets
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Simulasi Interaktif & Data Playground</h2>
+          <p class="text-slate-400 text-sm">Coba langsung model prediksi machine learning dan terminal interaktif di browser Anda.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left: Live ML Churn Prediction Simulator -->
+        <div class="lg:col-span-7 ios-glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+          <div class="flex items-center justify-between border-b border-white/10 pb-4">
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                <i class="fa-solid fa-chart-line text-base"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-white">Live Customer Churn Risk Calculator</h3>
+                <p class="text-xs text-slate-400">Scikit-learn logistic & weighting algorithm simulation</p>
+              </div>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">Client-Side ML</span>
+          </div>
+
+          <!-- Controls -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Tenure slider -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs font-medium">
+                <span class="text-slate-300">Masa Langganan (Tenure)</span>
+                <span id="valTenure" class="font-mono text-blue-400 font-bold">12 Bulan</span>
+              </div>
+              <input id="inputTenure" type="range" min="1" max="72" value="12" oninput="updateMLPrediction()" class="w-full accent-blue-500 bg-white/10 h-2 rounded-lg cursor-pointer">
+            </div>
+
+            <!-- Monthly Charges slider -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs font-medium">
+                <span class="text-slate-300">Biaya Bulanan ($)</span>
+                <span id="valCharges" class="font-mono text-purple-400 font-bold">$70.00</span>
+              </div>
+              <input id="inputCharges" type="range" min="15" max="150" value="70" oninput="updateMLPrediction()" class="w-full accent-purple-500 bg-white/10 h-2 rounded-lg cursor-pointer">
+            </div>
+
+            <!-- Contract Type -->
+            <div class="space-y-2">
+              <label class="text-xs font-medium text-slate-300">Tipe Kontrak</label>
+              <select id="inputContract" onchange="updateMLPrediction()" class="w-full bg-[#161822] text-sm text-slate-200 border border-white/10 rounded-xl px-3 py-2 outline-none focus:border-blue-500">
+                <option value="month">Month-to-Month (Resiko Tinggi)</option>
+                <option value="one_year">1 Year Contract</option>
+                <option value="two_year">2 Year Contract (Resiko Rendah)</option>
+              </select>
+            </div>
+
+            <!-- Internet Service -->
+            <div class="space-y-2">
+              <label class="text-xs font-medium text-slate-300">Layanan Internet</label>
+              <select id="inputInternet" onchange="updateMLPrediction()" class="w-full bg-[#161822] text-sm text-slate-200 border border-white/10 rounded-xl px-3 py-2 outline-none focus:border-blue-500">
+                <option value="fiber">Fiber Optic</option>
+                <option value="dsl">DSL</option>
+                <option value="no">Tidak Ada Internet</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ML Gauge & Output -->
+          <div class="p-5 rounded-2xl bg-black/30 border border-white/5 flex flex-col sm:flex-row items-center gap-6">
+            <div class="relative w-24 h-24 flex items-center justify-center shrink-0">
+              <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                <path class="text-white/10" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="gaugePath" class="text-blue-500 transition-all duration-500" stroke-dasharray="65, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <span id="gaugeText" class="absolute text-lg font-bold font-mono text-white">65%</span>
+            </div>
+
+            <div class="space-y-1 text-center sm:text-left">
+              <div class="flex items-center justify-center sm:justify-start gap-2">
+                <span id="riskBadge" class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                  Medium Churn Risk
+                </span>
+              </div>
+              <p id="recommendationText" class="text-xs text-slate-300 leading-relaxed">
+                Pelanggan memiliki probabilitas churn sedang. Rekomendasi: tawarkan transisi diskon kontrak 1 tahun.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive CLI Terminal -->
+        <div class="lg:col-span-5 ios-glass-card rounded-3xl p-6 flex flex-col font-mono text-xs space-y-3">
+          <!-- Terminal Header -->
+          <div class="flex items-center justify-between border-b border-white/10 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+              <span class="text-slate-400 ml-2 font-semibold">arjuna@datascience:~</span>
+            </div>
+            <span class="text-[10px] text-slate-500">v2.6-interactive</span>
+          </div>
+
+          <!-- Terminal Output Screen -->
+          <div id="terminalOutput" class="flex-1 overflow-y-auto max-h-[220px] space-y-1 text-slate-300 pr-1">
+            <p class="text-emerald-400">✓ Welcome to Arjuna's Interactive Terminal.</p>
+            <p class="text-slate-400">Type <span class="text-blue-400 font-bold">'help'</span> to see available commands (skills, exp, cv, contact, clear).</p>
+          </div>
+
+          <!-- Terminal Input Line -->
+          <form onsubmit="handleTerminalCommand(event)" class="flex items-center gap-2 pt-2 border-t border-white/10">
+            <span class="text-cyan-400 font-bold">$</span>
+            <input id="termInput" type="text" autocomplete="off" placeholder="try typing 'skills' or 'cv'..." class="flex-1 bg-transparent text-slate-100 outline-none font-mono">
+            <button type="submit" class="text-xs text-blue-400 hover:text-white px-2.5 py-1 rounded bg-white/5">Enter</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION SECTION -->
+    <section id="experience" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-purple-400 mb-1">
+            <i class="fa-solid fa-briefcase"></i> Riwayat Karier & Pendidikan
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Pengalaman Kerja & Studi</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Experience Column -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-clock-rotate-left text-blue-400"></i> Pengalaman Profesional
+          </h3>
+
+          <!-- Exp 1 -->
+          <div class="ios-glass-card rounded-2xl p-6 space-y-3 spotlight-card">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-base text-white">IT Engineer</h4>
+                <p class="text-xs text-blue-400 font-medium">Freelance / Self-Employed</p>
+              </div>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                Juni 2026 - Sekarang
+              </span>
+            </div>
+            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+              <li>Mengerjakan proyek machine learning: data preprocessing, visualisasi, pelatihan model, evaluasi, dan analisis prediksi.</li>
+              <li>Mengembangkan aplikasi berbasis web, dashboard, dan sistem informasi sesuai kebutuhan klien serta dokumentasi teknis.</li>
+              <li>Mendukung penyelesaian proyek end-to-end, mulai dari analisis kebutuhan hingga final delivery.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Python</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Machine Learning</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Data Preprocessing</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Dashboard</span>
+            </div>
+          </div>
+
+          <!-- Exp 2 -->
+          <div class="ios-glass-card rounded-2xl p-6 space-y-3 spotlight-card">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-base text-white">Software QA & Flutter Developer Intern</h4>
+                <p class="text-xs text-purple-400 font-medium">CV Adisatya IT Consultant</p>
+              </div>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                Juni 2026 - Sekarang
+              </span>
+            </div>
+            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+              <li>Melakukan functional, manual, dan regression testing pada <span class="text-white font-medium">Abel (Ayo Belajar)</span>, aplikasi pembelajaran berbasis Flutter.</li>
+              <li>Mengidentifikasi, mereproduksi, dan mendokumentasikan bug serta isu UI/UX, berkolaborasi dalam perbaikan fitur.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Flutter</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">QA Testing</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">UI/UX Audit</span>
+            </div>
+          </div>
+
+          <!-- Exp 3 -->
+          <div class="ios-glass-card rounded-2xl p-6 space-y-3 spotlight-card">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-bold text-base text-white">Full Stack Web Developer</h4>
+                <p class="text-xs text-emerald-400 font-medium">Anita Konveksi (Project Based)</p>
+              </div>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                Feb 2026 - Jun 2026
+              </span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Mengembangkan dan mengimplementasikan fitur front-end dan back-end menggunakan <span class="text-white font-medium">Laravel dan MySQL</span> untuk mendukung kebutuhan operasional bisnis konveksi.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Laravel</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">MySQL</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Full Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Organizations Column -->
+        <div class="space-y-6">
+          <div class="space-y-4">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap text-purple-400"></i> Pendidikan Formal
+            </h3>
+
+            <!-- Edu 1 -->
+            <div class="ios-glass-card rounded-2xl p-6 space-y-2 spotlight-card">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-bold text-base text-white">D3 Manajemen Informatika</h4>
+                  <p class="text-xs text-blue-400">Politeknik Negeri Malang (Polinema)</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">IPK: 3.83</span>
+                  <p class="text-[10px] text-slate-500 mt-1">2024 - 2027</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300">Fokus studi pada Data Science, Database Systems, Algoritma Pemrograman, dan Web Engineering.</p>
+            </div>
+
+            <!-- Edu 2 -->
+            <div class="ios-glass-card rounded-2xl p-6 space-y-2 spotlight-card">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-bold text-base text-white">SMA IPS</h4>
+                  <p class="text-xs text-slate-300">SMAN 2 Kota Kediri</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Nilai: 93</span>
+                  <p class="text-[10px] text-slate-500 mt-1">2021 - 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Organizations -->
+          <div class="space-y-4 pt-2">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-users text-cyan-400"></i> Pengalaman Organisasi
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="ios-glass-card rounded-2xl p-5 space-y-2">
+                <div class="text-xs font-mono text-cyan-400">Jan 2026 - Sekarang</div>
+                <h4 class="font-bold text-sm text-white">Advokasi</h4>
+                <p class="text-xs text-slate-400">UKM English Club Polinema</p>
+                <p class="text-[11px] text-slate-300">Menyalurkan aspirasi anggota dan koordinasi komunikasi organisasi.</p>
+              </div>
+
+              <div class="ios-glass-card rounded-2xl p-5 space-y-2">
+                <div class="text-xs font-mono text-amber-400">Apr 2022 - Apr 2023</div>
+                <h4 class="font-bold text-sm text-white">Bendahara</h4>
+                <p class="text-xs text-slate-400">Takmir Masjid Al-Anwar (TMA)</p>
+                <p class="text-[11px] text-slate-300">Menyusun RAB dan pencatatan kas organisasi secara transparan.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX & CERTIFICATIONS SECTION -->
+    <section id="skills" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">
+            <i class="fa-solid fa-cubes"></i> Kompetensi & Lisensi
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Keterampilan & Sertifikasi</h2>
+        </div>
+      </div>
+
+      <!-- Hard & Soft Skills Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Data Science & ML Skills -->
+        <div class="ios-glass-card rounded-3xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
+              <i class="fa-brands fa-python text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base text-white">Data Science & ML</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="skill-pill"><i class="fa-brands fa-python text-blue-400"></i> Python</span>
+            <span class="skill-pill"><i class="fa-solid fa-brain text-purple-400"></i> Machine Learning</span>
+            <span class="skill-pill"><i class="fa-solid fa-filter text-cyan-400"></i> Data Preprocessing</span>
+            <span class="skill-pill"><i class="fa-solid fa-chart-pie text-emerald-400"></i> Data Visualization</span>
+            <span class="skill-pill"><i class="fa-solid fa-square-poll-vertical text-amber-400"></i> Model Evaluation</span>
+            <span class="skill-pill">Scikit-Learn</span>
+            <span class="skill-pill">XGBoost</span>
+            <span class="skill-pill">Deep Learning (CNN)</span>
+          </div>
+        </div>
+
+        <!-- Database & Software Engineering -->
+        <div class="ios-glass-card rounded-3xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30">
+              <i class="fa-solid fa-database text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base text-white">Software & DB</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="skill-pill"><i class="fa-solid fa-database text-amber-400"></i> SQL / MySQL</span>
+            <span class="skill-pill"><i class="fa-solid fa-file-excel text-emerald-400"></i> Microsoft Excel</span>
+            <span class="skill-pill"><i class="fa-brands fa-laravel text-rose-500"></i> Laravel (PHP)</span>
+            <span class="skill-pill"><i class="fa-brands fa-flutter text-cyan-400"></i> Flutter</span>
+            <span class="skill-pill"><i class="fa-brands fa-github text-slate-300"></i> Git / GitHub</span>
+            <span class="skill-pill"><i class="fa-solid fa-network-wired text-blue-400"></i> RESTful API</span>
+            <span class="skill-pill"><i class="fa-brands fa-html5 text-orange-400"></i> HTML / CSS / JS</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="ios-glass-card rounded-3xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+              <i class="fa-solid fa-lightbulb text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base text-white">Professional Soft Skills</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="skill-pill"><i class="fa-solid fa-magnifying-glass-chart text-blue-400"></i> Kemampuan Analisis</span>
+            <span class="skill-pill"><i class="fa-solid fa-puzzle-piece text-purple-400"></i> Pemecahan Masalah</span>
+            <span class="skill-pill"><i class="fa-solid fa-stopwatch text-cyan-400"></i> Manajemen Waktu</span>
+            <span class="skill-pill"><i class="fa-solid fa-comments text-emerald-400"></i> Komunikasi Efektif</span>
+            <span class="skill-pill"><i class="fa-solid fa-people-group text-amber-400"></i> Kerja Sama Tim</span>
+            <span class="skill-pill"><i class="fa-solid fa-file-lines text-slate-300"></i> Dokumentasi Teknis</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications Carousel/Grid -->
+      <div class="pt-4 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-certificate text-amber-400"></i> Sertifikasi & Kursus Resmi
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+            <div class="flex justify-between items-start">
+              <span class="text-[10px] font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 flex items-center gap-1">
+                <i class="fa-brands fa-aws text-xs"></i> AWS (2026)
+              </span>
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+            </div>
+            <h4 class="font-bold text-sm text-white">Data Engineering on AWS</h4>
+            <p class="text-xs text-slate-400">Foundations Level</p>
+          </div>
+
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+            <div class="flex justify-between items-start">
+              <span class="text-[10px] font-mono font-bold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">Udemy (2026)</span>
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+            </div>
+            <h4 class="font-bold text-sm text-white">Probability & Statistics</h4>
+            <p class="text-xs text-slate-400">Data Science Curriculum</p>
+          </div>
+
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+            <div class="flex justify-between items-start">
+              <span class="text-[10px] font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Udemy (2026)</span>
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+            </div>
+            <h4 class="font-bold text-sm text-white">Analytics & Visualization</h4>
+            <p class="text-xs text-slate-400">Using Excel & Python</p>
+          </div>
+
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+            <div class="flex justify-between items-start">
+              <span class="text-[10px] font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">Course (2026)</span>
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+            </div>
+            <h4 class="font-bold text-sm text-white">Intro to Data Analytics</h4>
+            <p class="text-xs text-slate-400">Mini Course Certificate</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section id="projects" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">
+            <i class="fa-solid fa-folder-closed"></i> Portofolio Unggulan
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Proyek & Karya Teknologi</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="inline-flex p-1 rounded-2xl ios-glass border border-white/10 gap-1 text-xs">
+          <button onclick="filterProjects('all', this)" class="px-3.5 py-1.5 rounded-xl font-semibold bg-white/15 text-white transition-all">Semua</button>
+          <button onclick="filterProjects('ml', this)" class="px-3.5 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white transition-all">Data & ML</button>
+          <button onclick="filterProjects('web', this)" class="px-3.5 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white transition-all">Web & Mobile</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Project 1: Customer Churn Prediction -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">Machine Learning</span>
+              <a href="https://github.com/ArjunaFransesco/customer-churn-prediction" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-white">Customer Churn Prediction & Retention Analytics</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Pipeline klasifikasi churn pelanggan IBM Telco menggunakan Scikit-Learn dan XGBoost dengan penanganan class imbalance, hyperparameter tuning, dan integrasi UI web interaktif.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Scikit-Learn</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">XGBoost</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Flask</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/customer-churn-prediction" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Rice Leaf CNN -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-bold">Deep Learning</span>
+              <a href="https://github.com/ArjunaFransesco/dl_cnn" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-white">Rice Leaf Disease Classification (ResNet50V2)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Arsitektur CNN transfer learning untuk mendeteksi 4 penyakit daun padi dengan de-duplikasi pHash, group-aware splitting, confidence gating, dan holdout evaluation yang objektif.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">TensorFlow</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">ResNet50V2</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Computer Vision</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/dl_cnn" target="_blank" class="text-xs text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-1.5">
+              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Anita Konveksi Web -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="web">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Web System</span>
+              <a href="https://github.com/ArjunaFransesco/anita-konveksi" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-white">Anita Konveksi Management System</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Sistem informasi manajemen produksi, katalog pemesanan, dan inventaris berbasis full-stack Laravel dan MySQL untuk efisiensi operasional bisnis.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">MySQL</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Bootstrap/CSS</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/anita-konveksi" target="_blank" class="text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1.5">
+              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Abel Flutter QA -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="web">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">Mobile QA & Dev</span>
+            </div>
+            <h3 class="font-bold text-lg text-white">Abel (Ayo Belajar) Flutter App</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Pengujian fungsional dan regresi berkala pada aplikasi mobile edukasi berbasis Flutter di CV Adisatya IT Consultant, memastikan stabilitas fitur dan kepatuhan UI/UX.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Flutter</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Dart</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">QA Regression</span>
+            </div>
+            <span class="text-xs text-cyan-400 font-semibold">Internal Consultant Project</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Titanic Kaggle ML -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">Data Analytics</span>
+              <a href="https://github.com/ArjunaFransesco/titanic-kaggle-ml" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-white">Titanic Survival ML Pipeline</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Eksplorasi data preprocessing, visualisasi korelasi fitur, dan benchmarking model klasifikasi machine learning untuk kompetisi Kaggle Titanic.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Pandas</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Kaggle</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/titanic-kaggle-ml" target="_blank" class="text-xs text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1.5">
+              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT & CONNECT SECTION (iOS Action Sheet style) -->
+    <section id="contact" class="space-y-8">
+      <div class="ios-glass rounded-3xl p-8 sm:p-12 border border-white/15 relative overflow-hidden">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15">
+            <i class="fa-solid fa-paper-plane text-emerald-400"></i>
+            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Mari Terhubung</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-liquid-gradient">
+            Tertarik Berkolaborasi atau Merekrut?
+          </h2>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Saya selalu terbuka untuk mendiskusikan proyek Data Science, Machine Learning, konsultasi sistem informasi, maupun peluang magang dan karier.
+          </p>
+
+          <!-- Contact Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
+            
+            <!-- Email -->
+            <div onclick="copyText('arjunafransesco1@gmail.com', 'Email berhasil disalin!')" class="ios-glass-card rounded-2xl p-5 cursor-pointer group hover:border-blue-500/50">
+              <div class="p-3 rounded-xl bg-blue-500/20 text-blue-400 w-fit mb-3 flex items-center justify-center">
+                <i class="fa-solid fa-envelope text-lg"></i>
+              </div>
+              <span class="text-xs text-slate-400">Email Utama</span>
+              <p class="text-xs font-mono font-bold text-white truncate group-hover:text-blue-400 transition-colors">arjunafransesco1@gmail.com</p>
+              <span class="text-[10px] text-blue-400 mt-2 block">Klik untuk salin</span>
+            </div>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/arjunafransesco" target="_blank" onclick="playClick()" class="ios-glass-card rounded-2xl p-5 group hover:border-blue-500/50 block">
+              <div class="p-3 rounded-xl bg-[#0A66C2]/20 text-[#0A66C2] w-fit mb-3 flex items-center justify-center">
+                <svg class="w-5 h-5 fill-current text-[#0A66C2]" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </div>
+              <span class="text-xs text-slate-400">LinkedIn Profile</span>
+              <p class="text-xs font-bold text-white truncate group-hover:text-blue-400 transition-colors">/in/arjunafransesco</p>
+              <span class="text-[10px] text-blue-400 mt-2 block">Kunjungi profil →</span>
+            </a>
+
+            <!-- WhatsApp / Phone -->
+            <a href="https://wa.me/6287753462865" target="_blank" onclick="playClick()" class="ios-glass-card rounded-2xl p-5 group hover:border-emerald-500/50 block">
+              <div class="p-3 rounded-xl bg-emerald-500/20 text-emerald-400 w-fit mb-3 flex items-center justify-center">
+                <svg class="w-5 h-5 fill-current text-emerald-400" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+              </div>
+              <span class="text-xs text-slate-400">WhatsApp / Telp</span>
+              <p class="text-xs font-mono font-bold text-white truncate group-hover:text-emerald-400 transition-colors">+62 877-5346-2865</p>
+              <span class="text-[10px] text-emerald-400 mt-2 block">Kirim pesan langsung →</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- iOS Floating Bottom Dock -->
+  <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+    <div class="ios-glass-nav px-4 py-2.5 rounded-full flex items-center gap-2 sm:gap-3 shadow-2xl border border-white/20">
+      <a href="#hero" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Home">
+        <i class="fa-solid fa-house text-base"></i>
+      </a>
+      <a href="#interactive-lab" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Interactive Lab">
+        <i class="fa-solid fa-terminal text-base"></i>
+      </a>
+      <a href="#experience" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Experience & Education">
+        <i class="fa-solid fa-briefcase text-base"></i>
+      </a>
+      <a href="#skills" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Skills">
+        <i class="fa-solid fa-layer-group text-base"></i>
+      </a>
+      <a href="#projects" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Projects">
+        <i class="fa-solid fa-folder text-base"></i>
+      </a>
+      <div class="h-4 w-[1px] bg-white/20 mx-1"></div>
+      <a href="#contact" onclick="playClick()" class="dock-btn p-2.5 rounded-full bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-500/30 transition-all" title="Contact Me">
+        <i class="fa-solid fa-paper-plane text-base"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Toast Notification Pill -->
+  <div id="toast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 ios-glass px-4 py-2 rounded-full text-xs font-semibold text-white border border-white/20 shadow-xl opacity-0 translate-y-[-10px] pointer-events-none transition-all duration-300">
+    Notification
+  </div>
+
+  <!-- Interactive JavaScript Engine -->
+  <script>
+    // Initialize Lucide Icons if available
+    try { lucide.createIcons(); } catch(e) {}
+
+    // Sound Synthesizer (Web Audio API - iOS haptic clicks)
+    let audioEnabled = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playClick(freq = 600, duration = 0.03) {
+      if (!audioEnabled) return;
+      try {
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    function toggleAudio(e) {
+      e.stopPropagation();
+      audioEnabled = !audioEnabled;
+      const icon = document.getElementById('soundIcon');
+      if (audioEnabled) {
+        icon.className = 'fa-solid fa-volume-high text-xs';
+        showToast('Suara haptik diaktifkan');
+        playClick(800, 0.05);
+      } else {
+        icon.className = 'fa-solid fa-volume-xmark text-xs';
+        showToast('Suara haptik dimatikan');
+      }
+    }
+
+    // Live Clock for Dynamic Island
+    function updateClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      document.getElementById('islandClock').innerText = timeStr;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Mouse Spotlight Position tracker for cards
+    document.querySelectorAll('.spotlight-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+
+    // Client-Side ML Prediction Logic
+    function updateMLPrediction() {
+      playClick(500, 0.02);
+      const tenure = parseInt(document.getElementById('inputTenure').value);
+      const charges = parseFloat(document.getElementById('inputCharges').value);
+      const contract = document.getElementById('inputContract').value;
+      const internet = document.getElementById('inputInternet').value;
+
+      document.getElementById('valTenure').innerText = tenure + ' Bulan';
+      document.getElementById('valCharges').innerText = '$' + charges.toFixed(2);
+
+      // Simulation algorithm: logistic weighting
+      let baseLogit = -0.5;
+      baseLogit -= (tenure / 72) * 2.2; // Longer tenure reduces churn
+      baseLogit += ((charges - 15) / 135) * 1.8; // Higher charges increase churn
+      
+      if (contract === 'month') baseLogit += 1.4;
+      else if (contract === 'two_year') baseLogit -= 1.6;
+
+      if (internet === 'fiber') baseLogit += 0.8;
+      else if (internet === 'no') baseLogit -= 0.9;
+
+      const prob = 1 / (1 + Math.exp(-baseLogit));
+      const percent = Math.round(prob * 100);
+
+      // Update Gauge
+      const gaugePath = document.getElementById('gaugePath');
+      const gaugeText = document.getElementById('gaugeText');
+      const riskBadge = document.getElementById('riskBadge');
+      const recommendationText = document.getElementById('recommendationText');
+
+      gaugePath.setAttribute('stroke-dasharray', `${percent}, 100`);
+      gaugeText.innerText = `${percent}%`;
+
+      if (percent >= 65) {
+        gaugePath.className.baseVal = 'text-rose-500 transition-all duration-500';
+        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/20 text-rose-400 border border-rose-500/30';
+        riskBadge.innerText = 'High Churn Risk';
+        recommendationText.innerText = 'Pelanggan rentan berhenti! Berikan penawaran diskon loyalty kontraktual dan jadwalkan evaluasi kepuasan layanan.';
+      } else if (percent >= 35) {
+        gaugePath.className.baseVal = 'text-amber-500 transition-all duration-500';
+        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30';
+        riskBadge.innerText = 'Medium Churn Risk';
+        recommendationText.innerText = 'Probabilitas sedang. Tawarkan add-on layanan bernilai tambah (e.g. Online Security/Tech Support) untuk meningkatkan retensi.';
+      } else {
+        gaugePath.className.baseVal = 'text-emerald-500 transition-all duration-500';
+        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        riskBadge.innerText = 'Low Churn Risk';
+        recommendationText.innerText = 'Pelanggan sangat loyal dan stabil. Pertahankan kualitas jaringan dan lakukan monitoring penggunaan berkala.';
+      }
+    }
+
+    // Terminal Commands Simulator
+    function handleTerminalCommand(e) {
+      e.preventDefault();
+      const input = document.getElementById('termInput');
+      const cmd = input.value.trim().toLowerCase();
+      if (!cmd) return;
+      playClick(700, 0.03);
+
+      const output = document.getElementById('terminalOutput');
+      const userLine = document.createElement('p');
+      userLine.className = 'text-slate-300 font-bold';
+      userLine.innerHTML = `<span class="text-cyan-400">$</span> ${input.value}`;
+      output.appendChild(userLine);
+
+      const respLine = document.createElement('p');
+
+      switch(cmd) {
+        case 'help':
+          respLine.className = 'text-slate-300';
+          respLine.innerHTML = 'Commands: <span class="text-blue-400">cv</span>, <span class="text-purple-400">skills</span>, <span class="text-emerald-400">exp</span>, <span class="text-amber-400">edu</span>, <span class="text-cyan-400">contact</span>, <span class="text-rose-400">clear</span>';
+          break;
+        case 'cv':
+          respLine.className = 'text-blue-300';
+          respLine.innerText = 'Arjuna Fransesco - Data Scientist & ML Engineer (IPK 3.83, Polinema). Spesialisasi Machine Learning, SQL, Python, Laravel, Flutter.';
+          break;
+        case 'skills':
+          respLine.className = 'text-purple-300';
+          respLine.innerText = 'Python, Scikit-Learn, XGBoost, SQL/MySQL, Data Preprocessing, Model Evaluation, Flutter, Laravel, AWS Data Engineering.';
+          break;
+        case 'exp':
+          respLine.className = 'text-emerald-300';
+          respLine.innerText = '1. IT Engineer (Freelance) | 2. QA & Flutter Intern (CV Adisatya) | 3. Full Stack Dev (Anita Konveksi)';
+          break;
+        case 'edu':
+          respLine.className = 'text-amber-300';
+          respLine.innerText = 'Politeknik Negeri Malang (D3 Manajemen Informatika, IPK 3.83) | SMAN 2 Kota Kediri (Nilai 93)';
+          break;
+        case 'contact':
+          respLine.className = 'text-cyan-300';
+          respLine.innerText = 'Email: arjunafransesco1@gmail.com | WA: +62 877-5346-2865 | LinkedIn: /in/arjunafransesco';
+          break;
+        case 'clear':
+          output.innerHTML = '';
+          input.value = '';
+          return;
+        default:
+          respLine.className = 'text-rose-400';
+          respLine.innerText = `Command not recognized: '${cmd}'. Type 'help' for options.`;
+      }
+
+      output.appendChild(respLine);
+      output.scrollTop = output.scrollHeight;
+      input.value = '';
+    }
+
+    // Project Filtering
+    function filterProjects(category, btn) {
+      playClick(550, 0.03);
+      document.querySelectorAll('#projects button').forEach(b => {
+        b.className = 'px-3.5 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white transition-all';
+      });
+      btn.className = 'px-3.5 py-1.5 rounded-xl font-semibold bg-white/15 text-white transition-all';
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Toast and Copy Utility
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.remove('opacity-0', 'translate-y-[-10px]');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-[-10px]');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2500);
+    }
+
+    function copyText(text, msg) {
+      playClick(850, 0.04);
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(msg);
+      }).catch(() => {
+        showToast('Gagal menyalin');
+      });
+    }
+  </script>
+</body>
+</html>
