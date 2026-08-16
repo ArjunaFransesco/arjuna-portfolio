@@ -1,9 +1,12 @@
 # 📱 Arjuna Fransesco — iOS Liquid Glass Portfolio
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-007AFF?style=flat&logo=safari&logoColor=white)](https://arjunafransesco.github.io/arjuna-portfolio/)
 [![React 19](https://img.shields.io/badge/React-19.x-blue.svg)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v3.4-38B2AC.svg)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Bundler-Vite%207-646CFF.svg)](https://vitejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+> 🌐 **Live Website**: [https://arjunafransesco.github.io/arjuna-portfolio/](https://arjunafransesco.github.io/arjuna-portfolio/)
 
 An interactive, high-performance portfolio website built with **iOS Glassmorphism (VisionOS style)** and **Tailwind CSS**. Features real-time client-side ML model prediction playgrounds, interactive CLI terminals, haptic sound feedback, and structured career timeline exhibits.
 
