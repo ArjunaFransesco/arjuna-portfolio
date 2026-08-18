@@ -189,55 +189,55 @@
   </div>
 
   <!-- iOS Dynamic Island Header -->
-  <header class="fixed top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300">
-    <div id="dynamicIsland" class="ios-glass px-5 py-2.5 rounded-full flex items-center gap-4 cursor-pointer hover:scale-[1.03] transition-all duration-300 shadow-2xl border border-white/20 group">
+  <header class="fixed top-3.5 sm:top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 max-w-[94vw] sm:max-w-none">
+    <div id="dynamicIsland" class="ios-glass px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center gap-2.5 sm:gap-4 cursor-pointer hover:scale-[1.02] transition-all duration-300 shadow-2xl border border-white/20 group">
       <!-- Logo & Status Indicator -->
-      <div class="flex items-center gap-2.5">
-        <div class="w-6 h-6 rounded-lg bg-[#007AFF] shadow-sm flex items-center justify-center">
-          <span class="text-[10px] font-black tracking-tighter text-white font-sans">AF</span>
+      <div class="flex items-center gap-2">
+        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-[#007AFF] shadow-sm flex items-center justify-center shrink-0">
+          <span class="text-[9px] sm:text-[10px] font-black tracking-tighter text-white font-sans">AF</span>
         </div>
-        <span class="text-xs font-semibold tracking-wide text-slate-200">Arjuna Fransesco</span>
+        <span class="text-[11px] sm:text-xs font-semibold tracking-tight sm:tracking-wide text-slate-200 whitespace-nowrap">Arjuna Fransesco</span>
       </div>
 
       <div class="h-3 w-[1px] bg-white/20"></div>
 
       <!-- Live Clock -->
-      <div id="islandClock" class="font-mono text-xs text-slate-300 font-medium">00:00:00</div>
+      <div id="islandClock" class="font-mono text-[11px] sm:text-xs text-slate-300 font-medium whitespace-nowrap">00:00:00</div>
 
-      <div class="h-3 w-[1px] bg-white/20"></div>
+      <div class="hidden sm:block h-3 w-[1px] bg-white/20"></div>
 
-      <!-- Focus Tag -->
-      <div class="flex items-center gap-1.5 text-xs text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full font-medium border border-blue-500/20">
+      <!-- Focus Tag (Clean responsive visibility) -->
+      <div class="hidden sm:flex items-center gap-1.5 text-xs text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full font-medium border border-blue-500/20 whitespace-nowrap">
         <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
         <span>Data Science</span>
       </div>
 
       <!-- Quick Audio Feedback Toggle -->
-      <button id="soundToggle" onclick="toggleAudio(event)" title="Toggle Haptic Sound" class="text-slate-400 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10">
-        <i id="soundIcon" class="fa-solid fa-volume-high text-xs"></i>
+      <button id="soundToggle" onclick="toggleAudio(event)" title="Toggle Haptic Sound" class="text-slate-400 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10 shrink-0">
+        <i id="soundIcon" class="fa-solid fa-volume-high text-[11px] sm:text-xs"></i>
       </button>
     </div>
   </header>
 
   <!-- Main Content Container -->
-  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-36 space-y-24">
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-32 sm:pb-36 space-y-14 sm:space-y-24">
 
     <!-- HERO SECTION: iOS Vision Pro style Glass Card -->
     <section id="hero" class="relative">
-      <div class="ios-glass rounded-3xl p-8 sm:p-12 md:p-16 border border-white/15 relative overflow-hidden">
+      <div class="ios-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 md:p-16 border border-white/15 relative overflow-hidden">
         <!-- Inner Specular Light -->
         <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           <!-- Left: Hero Text & Badges -->
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-md">
-              <i class="fa-solid fa-graduation-cap text-blue-400"></i>
-              <span class="text-xs font-semibold text-slate-300 tracking-wide uppercase">Politeknik Negeri Malang • IPK 3.83</span>
+          <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-md">
+              <i class="fa-solid fa-graduation-cap text-blue-400 text-xs"></i>
+              <span class="text-[11px] sm:text-xs font-semibold text-slate-300 tracking-wide uppercase">Politeknik Negeri Malang • IPK 3.83</span>
             </div>
 
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-liquid-gradient">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] sm:leading-[1.1] text-liquid-gradient">
               Engineering Intelligent Systems with <span class="text-accent-gradient">Data & Code.</span>
             </h1>
 
@@ -637,17 +637,17 @@
       </div>
 
       <!-- Hard & Soft Skills Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
         
         <!-- Data Science & ML Skills -->
-        <div class="ios-glass-card rounded-3xl p-6 space-y-4">
+        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start">
           <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
-              <i class="fa-brands fa-python text-lg"></i>
+            <div class="p-2 sm:p-2.5 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
+              <i class="fa-brands fa-python text-base sm:text-lg"></i>
             </div>
-            <h3 class="font-bold text-base text-white">Data Science & ML</h3>
+            <h3 class="font-bold text-sm sm:text-base text-white">Data Science & ML</h3>
           </div>
-          <div class="flex flex-wrap gap-2 pt-2">
+          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
             <span class="skill-pill"><i class="fa-brands fa-python text-blue-400"></i> Python</span>
             <span class="skill-pill"><i class="fa-solid fa-brain text-purple-400"></i> Machine Learning</span>
             <span class="skill-pill"><i class="fa-solid fa-filter text-cyan-400"></i> Data Preprocessing</span>
@@ -660,14 +660,14 @@
         </div>
 
         <!-- Database & Software Engineering -->
-        <div class="ios-glass-card rounded-3xl p-6 space-y-4">
+        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start">
           <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30">
-              <i class="fa-solid fa-database text-lg"></i>
+            <div class="p-2 sm:p-2.5 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30">
+              <i class="fa-solid fa-database text-base sm:text-lg"></i>
             </div>
-            <h3 class="font-bold text-base text-white">Software & DB</h3>
+            <h3 class="font-bold text-sm sm:text-base text-white">Software & DB</h3>
           </div>
-          <div class="flex flex-wrap gap-2 pt-2">
+          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
             <span class="skill-pill"><i class="fa-solid fa-database text-amber-400"></i> SQL / MySQL</span>
             <span class="skill-pill"><i class="fa-solid fa-file-excel text-emerald-400"></i> Microsoft Excel</span>
             <span class="skill-pill"><i class="fa-brands fa-laravel text-rose-500"></i> Laravel (PHP)</span>
@@ -679,14 +679,14 @@
         </div>
 
         <!-- Soft Skills -->
-        <div class="ios-glass-card rounded-3xl p-6 space-y-4">
+        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start">
           <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-              <i class="fa-solid fa-lightbulb text-lg"></i>
+            <div class="p-2 sm:p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+              <i class="fa-solid fa-lightbulb text-base sm:text-lg"></i>
             </div>
-            <h3 class="font-bold text-base text-white">Professional Soft Skills</h3>
+            <h3 class="font-bold text-sm sm:text-base text-white">Professional Soft Skills</h3>
           </div>
-          <div class="flex flex-wrap gap-2 pt-2">
+          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
             <span class="skill-pill"><i class="fa-solid fa-magnifying-glass-chart text-blue-400"></i> Kemampuan Analisis</span>
             <span class="skill-pill"><i class="fa-solid fa-puzzle-piece text-purple-400"></i> Pemecahan Masalah</span>
             <span class="skill-pill"><i class="fa-solid fa-stopwatch text-cyan-400"></i> Manajemen Waktu</span>
@@ -959,26 +959,26 @@
   </main>
 
   <!-- iOS Floating Bottom Dock -->
-  <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-    <div class="ios-glass-nav px-4 py-2.5 rounded-full flex items-center gap-2 sm:gap-3 shadow-2xl border border-white/20">
-      <a href="#hero" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Home">
-        <i class="fa-solid fa-house text-base"></i>
+  <nav class="fixed bottom-3.5 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-[94vw] sm:max-w-none">
+    <div class="ios-glass-nav px-3 sm:px-4 py-2 sm:py-2.5 rounded-full flex items-center gap-1 sm:gap-2.5 shadow-2xl border border-white/20">
+      <a href="#hero" onclick="playClick()" class="dock-btn p-2 sm:p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Home">
+        <i class="fa-solid fa-house text-sm sm:text-base"></i>
       </a>
-      <a href="#interactive-lab" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Interactive Lab">
-        <i class="fa-solid fa-terminal text-base"></i>
+      <a href="#interactive-lab" onclick="playClick()" class="dock-btn p-2 sm:p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Interactive Lab">
+        <i class="fa-solid fa-terminal text-sm sm:text-base"></i>
       </a>
-      <a href="#experience" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Experience & Education">
-        <i class="fa-solid fa-briefcase text-base"></i>
+      <a href="#experience" onclick="playClick()" class="dock-btn p-2 sm:p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Experience & Education">
+        <i class="fa-solid fa-briefcase text-sm sm:text-base"></i>
       </a>
-      <a href="#skills" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Skills">
-        <i class="fa-solid fa-layer-group text-base"></i>
+      <a href="#skills" onclick="playClick()" class="dock-btn p-2 sm:p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Skills">
+        <i class="fa-solid fa-layer-group text-sm sm:text-base"></i>
       </a>
-      <a href="#projects" onclick="playClick()" class="dock-btn p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Projects">
-        <i class="fa-solid fa-folder text-base"></i>
+      <a href="#projects" onclick="playClick()" class="dock-btn p-2 sm:p-2.5 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Projects">
+        <i class="fa-solid fa-folder text-sm sm:text-base"></i>
       </a>
-      <div class="h-4 w-[1px] bg-white/20 mx-1"></div>
-      <a href="#contact" onclick="playClick()" class="dock-btn p-2.5 rounded-full bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-500/30 transition-all" title="Contact Me">
-        <i class="fa-solid fa-paper-plane text-base"></i>
+      <div class="h-3.5 sm:h-4 w-[1px] bg-white/20 mx-0.5 sm:mx-1"></div>
+      <a href="#contact" onclick="playClick()" class="dock-btn p-2 sm:p-2.5 rounded-full bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-500/30 transition-all" title="Contact Me">
+        <i class="fa-solid fa-paper-plane text-sm sm:text-base"></i>
       </a>
     </div>
   </nav>
