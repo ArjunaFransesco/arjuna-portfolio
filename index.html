@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id" class="dark scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arjuna Fransesco</title>
-  <meta name="description" content="Portfolio resmi Arjuna Fransesco - Mahasiswa D3 Manajemen Informatika Polinema, Data Science, Machine Learning, dan Software Development.">
+  <title>Arjuna Fransesco | Data Science & Machine Learning Specialist</title>
+  <meta name="description" content="Official portfolio of Arjuna Fransesco - Informatics Management graduate/student at State Polytechnic of Malang, specializing in Data Science, Machine Learning, and Software Engineering.">
   
   <!-- Website Logo & Favicon (Solid Minimalist AF) -->
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -74,13 +74,48 @@
   </script>
 
   <style>
-    /* iOS Glassmorphic Styles */
+    /* Ultra-Smooth 60/120fps View Transition Architecture */
+    ::view-transition-group(root) {
+      animation-duration: 0.3s;
+    }
+    ::view-transition-old(root) {
+      animation: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both fade-out;
+    }
+    ::view-transition-new(root) {
+      animation: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both fade-in;
+    }
+    @keyframes fade-out {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Fallback Lightweight GPU-Accelerated Theme Transitions (Zero Choke) */
+    body {
+      transition: background-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .ios-glass,
+    .ios-glass-card,
+    .ios-glass-nav {
+      transition: background-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* iOS Glassmorphic Styles — Dark & Light Mode Compatible */
     .ios-glass {
       background: rgba(22, 23, 30, 0.65);
       backdrop-filter: blur(28px) saturate(190%);
       -webkit-backdrop-filter: blur(28px) saturate(190%);
       border: 1px solid rgba(255, 255, 255, 0.12);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+    html:not(.dark) .ios-glass {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(203, 213, 225, 0.7);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.9);
     }
 
     .ios-glass-card {
@@ -91,12 +126,22 @@
       box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.12);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
+    html:not(.dark) .ios-glass-card {
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+    }
 
     .ios-glass-card:hover {
       background: rgba(35, 38, 52, 0.75);
       border-color: rgba(255, 255, 255, 0.25);
       box-shadow: 0 25px 50px -10px rgba(0, 122, 255, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.3);
       transform: translateY(-4px) scale(1.01);
+    }
+    html:not(.dark) .ios-glass-card:hover {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(0, 122, 255, 0.4);
+      box-shadow: 0 20px 40px -10px rgba(0, 122, 255, 0.16);
     }
 
     .ios-glass-nav {
@@ -105,6 +150,12 @@
       -webkit-backdrop-filter: blur(32px) saturate(200%);
       border: 1px solid rgba(255, 255, 255, 0.14);
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    html:not(.dark) .ios-glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(203, 213, 225, 0.8);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
     }
 
     /* Custom Scrollbar */
@@ -114,17 +165,29 @@
     ::-webkit-scrollbar-track {
       background: #0d0e12;
     }
+    html:not(.dark) ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
     ::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.18);
       border-radius: 9999px;
     }
+    html:not(.dark) ::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.5);
+    }
     ::-webkit-scrollbar-thumb:hover {
       background: rgba(255, 255, 255, 0.35);
+    }
+    html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+      background: rgba(100, 116, 139, 0.7);
     }
 
     /* Clean Solid Text — no gradient slop */
     .text-liquid-gradient {
       color: #FFFFFF;
+    }
+    html:not(.dark) .text-liquid-gradient {
+      color: #0F172A;
     }
 
     .text-accent-gradient {
@@ -166,6 +229,12 @@
       align-items: center;
       gap: 0.35rem;
     }
+    html:not(.dark) .skill-pill {
+      background: rgba(241, 245, 249, 0.85);
+      border: 1px solid rgba(203, 213, 225, 0.8);
+      color: #334155;
+    }
+
     .dock-btn {
       width: 2.75rem;
       height: 2.75rem;
@@ -183,43 +252,84 @@
         height: 2.5rem;
       }
     }
+
+    /* Hide scrollbar utility */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Creative Scroll-Driven Reveal System */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(28px) scale(0.975);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.revealed {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .stagger-1 { transition-delay: 60ms; }
+    .stagger-2 { transition-delay: 120ms; }
+    .stagger-3 { transition-delay: 180ms; }
+    .stagger-4 { transition-delay: 240ms; }
+    .stagger-5 { transition-delay: 300ms; }
+    .stagger-6 { transition-delay: 360ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
-<body class="bg-[#090A0F] text-slate-100 min-h-screen selection:bg-ios-blue selection:text-white font-sans relative overflow-x-hidden">
+<body class="bg-[#090A0F] dark:bg-[#090A0F] text-slate-100 dark:text-slate-100 min-h-screen selection:bg-ios-blue selection:text-white font-sans relative overflow-x-hidden transition-colors duration-300">
 
-  <!-- Ambient Glow (single blue, restrained) -->
+  <!-- Ambient Glow -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div id="orb1" class="absolute -top-32 left-1/4 w-[550px] h-[550px] bg-blue-600/10 rounded-full blur-[130px] animate-blob"></div>
-    <div id="orb2" class="absolute top-1/3 -right-20 w-[500px] h-[500px] bg-blue-600/8 rounded-full blur-[140px] animate-blob animation-delay-2000"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,10,15,0.85)_100%)]"></div>
+    <div id="orb1" class="absolute -top-32 left-1/4 w-[550px] h-[550px] bg-blue-600/10 dark:bg-blue-600/10 rounded-full blur-[130px] animate-blob"></div>
+    <div id="orb2" class="absolute top-1/3 -right-20 w-[500px] h-[500px] bg-blue-600/8 dark:bg-blue-600/8 rounded-full blur-[140px] animate-blob animation-delay-2000"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,10,15,0.85)_100%)] opacity-0 dark:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(248,250,252,0.85)_100%)] opacity-100 dark:opacity-0 transition-opacity duration-300 pointer-events-none"></div>
   </div>
 
   <!-- iOS Dynamic Island Header -->
   <header class="fixed top-3.5 sm:top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 max-w-[94vw] sm:max-w-none">
-    <div id="dynamicIsland" class="ios-glass px-4 sm:px-5 py-2.5 rounded-full flex items-center gap-3 sm:gap-4 cursor-pointer hover:scale-[1.02] transition-all duration-300 shadow-2xl border border-white/20 group">
-      <!-- Logo & Status Indicator -->
+    <div id="dynamicIsland" class="ios-glass px-4 sm:px-5 py-2.5 rounded-full flex items-center gap-3 sm:gap-4 cursor-pointer hover:scale-[1.02] transition-all duration-300 shadow-2xl border border-white/20 dark:border-white/20 group">
+      <!-- Logo & Name -->
       <div class="flex items-center gap-2.5">
         <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-[#007AFF] shadow-sm flex items-center justify-center shrink-0">
           <span class="text-[10px] sm:text-xs font-black tracking-tighter text-white font-sans">AF</span>
         </div>
-        <span class="text-xs sm:text-sm font-semibold tracking-wide text-slate-200 whitespace-nowrap">Arjuna Fransesco</span>
+        <span class="text-xs sm:text-sm font-semibold tracking-wide text-slate-800 dark:text-slate-200 whitespace-nowrap">Arjuna Fransesco</span>
       </div>
 
-      <div class="h-3.5 w-[1px] bg-white/20"></div>
+      <div class="h-3.5 w-[1px] bg-slate-300 dark:bg-white/20"></div>
 
       <!-- Live Clock -->
-      <div id="islandClock" class="font-mono text-xs sm:text-sm text-slate-300 font-medium whitespace-nowrap">00:00:00</div>
+      <div id="islandClock" class="font-mono text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium whitespace-nowrap">00:00:00</div>
 
-      <div class="hidden sm:block h-3.5 w-[1px] bg-white/20"></div>
+      <div class="hidden sm:block h-3.5 w-[1px] bg-slate-300 dark:bg-white/20"></div>
 
-      <!-- Focus Tag (Clean responsive visibility) -->
-      <div class="hidden sm:flex items-center gap-1.5 text-xs text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full font-medium border border-blue-500/20 whitespace-nowrap">
+      <!-- Focus Tag -->
+      <div class="hidden sm:flex items-center gap-1.5 text-xs text-blue-500 dark:text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full font-medium border border-blue-500/20 whitespace-nowrap">
         <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
         <span>Data Science</span>
       </div>
 
+      <!-- Theme Toggle (Dark / Light Mode) — Monochrome B&W Button -->
+      <button id="themeToggle" onclick="toggleTheme(event)" title="Toggle Dark / Light Mode" class="text-zinc-600 dark:text-zinc-300 hover:text-black dark:hover:text-white p-1.5 rounded-full hover:bg-slate-200/60 dark:hover:bg-white/10 shrink-0 transition-colors">
+        <i id="themeIcon" class="fa-solid fa-sun text-xs sm:text-sm text-zinc-100"></i>
+      </button>
+
       <!-- Quick Audio Feedback Toggle -->
-      <button id="soundToggle" onclick="toggleAudio(event)" title="Toggle Haptic Sound" class="text-slate-400 hover:text-white transition-colors p-1.5 rounded-full hover:bg-white/10 shrink-0">
+      <button id="soundToggle" onclick="toggleAudio(event)" title="Toggle Haptic Sound" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors p-1.5 rounded-full hover:bg-slate-200/60 dark:hover:bg-white/10 shrink-0">
         <i id="soundIcon" class="fa-solid fa-volume-high text-xs sm:text-sm"></i>
       </button>
     </div>
@@ -228,9 +338,9 @@
   <!-- Main Content Container -->
   <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-32 sm:pb-36 space-y-14 sm:space-y-24">
 
-    <!-- HERO SECTION: iOS Vision Pro style Glass Card -->
+    <!-- HERO SECTION: iOS Glass Card -->
     <section id="hero" class="relative">
-      <div class="ios-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 md:p-16 border border-white/15 relative overflow-hidden">
+      <div class="ios-glass rounded-2xl sm:rounded-3xl p-5 sm:p-10 md:p-16 border border-slate-200/80 dark:border-white/15 relative overflow-hidden">
         <!-- Inner Specular Light -->
         <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
         
@@ -238,32 +348,32 @@
           
           <!-- Left: Hero Text & Badges -->
           <div class="lg:col-span-7 space-y-4 sm:space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-md">
-              <i class="fa-solid fa-graduation-cap text-amber-400 text-xs"></i>
-              <span class="text-[11px] sm:text-xs font-semibold text-slate-300 tracking-wide uppercase">Politeknik Negeri Malang • IPK 3.83</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/15 backdrop-blur-md">
+              <i class="fa-solid fa-graduation-cap text-amber-500 dark:text-amber-400 text-xs"></i>
+              <span class="text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300 tracking-wide uppercase">State Polytechnic of Malang • GPA 3.83/4.00</span>
             </div>
 
             <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15] sm:leading-[1.1] text-liquid-gradient">
               Engineering Intelligent Systems with <span class="text-accent-gradient">Data & Code.</span>
             </h1>
 
-            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
-              Halo! Saya <span class="text-white font-semibold">Arjuna Fransesco</span>, mahasiswa Manajemen Informatika yang berfokus pada <span class="text-blue-400 font-medium">Data Science</span>, <span class="text-indigo-400 font-medium">Machine Learning</span>, dan <span class="text-emerald-400 font-medium">Full Stack Development</span>. Berpengalaman membangun pipeline data end-to-end, evaluasi model prediktif, serta sistem informasi modern.
+            <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+              Hi, I'm <span class="text-slate-900 dark:text-white font-semibold">Arjuna Fransesco</span> — an Informatics Management student specializing in <span class="text-blue-500 dark:text-blue-400 font-medium">Data Science</span>, <span class="text-indigo-500 dark:text-indigo-400 font-medium">Machine Learning</span>, and <span class="text-emerald-600 dark:text-emerald-400 font-medium">Full Stack Development</span>. Experienced in building end-to-end data pipelines, evaluating predictive models, and engineering modern interactive applications.
             </p>
 
             <!-- Quick Action Buttons -->
             <div class="flex flex-wrap gap-4 pt-2">
               <a href="#projects" onclick="playClick()" class="px-6 py-3 rounded-2xl bg-[#007AFF] hover:bg-[#0071E3] text-white font-semibold shadow-lg shadow-blue-500/20 transition-all duration-200 flex items-center gap-2 group border border-white/10">
                 <i class="fa-solid fa-folder-open text-sm transition-transform group-hover:scale-110"></i>
-                <span>Jelajahi Proyek</span>
+                <span>Explore Projects</span>
               </a>
 
-              <a href="#interactive-lab" onclick="playClick()" class="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/15 text-slate-100 font-semibold backdrop-blur-md transition-all duration-200 flex items-center gap-2 border border-white/15 hover:border-white/30">
-                <i class="fa-solid fa-terminal text-sm text-emerald-400"></i>
+              <a href="#interactive-lab" onclick="playClick()" class="px-6 py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-white/10 dark:hover:bg-white/15 text-slate-800 dark:text-slate-100 font-semibold backdrop-blur-md transition-all duration-200 flex items-center gap-2 border border-slate-200 dark:border-white/15 hover:border-slate-300 dark:hover:border-white/30">
+                <i class="fa-solid fa-terminal text-sm text-emerald-500 dark:text-emerald-400"></i>
                 <span>Interactive ML Playground</span>
               </a>
 
-              <!-- GitHub Button with authentic solid GitHub dark badge -->
+              <!-- GitHub Button -->
               <a href="https://github.com/ArjunaFransesco" target="_blank" onclick="playClick()" class="px-5 py-3 rounded-2xl bg-[#24292e]/80 hover:bg-[#24292e] text-white font-semibold border border-white/15 flex items-center gap-2.5 transition-all shadow-md">
                 <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -271,8 +381,8 @@
                 <span>GitHub</span>
               </a>
 
-              <!-- LinkedIn Button with official LinkedIn solid Blue -->
-              <a href="https://www.linkedin.com/in/arjunafransesco" target="_blank" onclick="playClick()" class="px-5 py-3 rounded-2xl bg-[#0A66C2]/15 hover:bg-[#0A66C2]/25 text-white font-semibold border border-[#0A66C2]/40 flex items-center gap-2.5 transition-all shadow-md">
+              <!-- LinkedIn Button -->
+              <a href="https://www.linkedin.com/in/arjunafransesco" target="_blank" onclick="playClick()" class="px-5 py-3 rounded-2xl bg-[#0A66C2]/15 hover:bg-[#0A66C2]/25 text-slate-900 dark:text-white font-semibold border border-[#0A66C2]/40 flex items-center gap-2.5 transition-all shadow-md">
                 <svg class="w-5 h-5 fill-current text-[#0A66C2]" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
@@ -280,18 +390,18 @@
               </a>
             </div>
 
-            <!-- Contact Quick Pills with solid distinct icons -->
-            <div class="pt-4 flex flex-wrap gap-3 text-xs text-slate-300 font-mono">
-              <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/5">
-                <i class="fa-solid fa-location-dot text-rose-400"></i>
-                <span>Kediri, Jawa Timur</span>
+            <!-- Contact Quick Pills -->
+            <div class="pt-4 flex flex-wrap gap-3 text-xs text-slate-600 dark:text-slate-300 font-mono">
+              <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-black/40 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/5">
+                <i class="fa-solid fa-location-dot text-rose-500 dark:text-rose-400"></i>
+                <span>Kediri, East Java, ID</span>
               </div>
-              <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/5">
-                <i class="fa-solid fa-envelope text-sky-400"></i>
+              <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-black/40 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/5">
+                <i class="fa-solid fa-envelope text-sky-500 dark:text-sky-400"></i>
                 <span>arjunafransesco1@gmail.com</span>
               </div>
-              <div class="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-xl border border-white/5">
-                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-black/40 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/5">
+                <i class="fa-brands fa-whatsapp text-emerald-500 dark:text-emerald-400"></i>
                 <span>+62 877-5346-2865</span>
               </div>
             </div>
@@ -300,52 +410,50 @@
           <!-- Right: Interactive Profile Glass Card (iOS Widget style) -->
           <div class="lg:col-span-5 flex justify-center">
             <div class="w-full max-w-sm ios-glass-card rounded-3xl p-6 relative group overflow-hidden spotlight-card">
-              <div class="flex items-center justify-between pb-4 border-b border-white/10">
-                <div class="flex items-center gap-3">
-                  <div class="w-12 h-12 rounded-2xl bg-[#007AFF] p-[2px] shadow-lg">
-                    <div class="w-full h-full bg-[#12131A] rounded-2xl flex items-center justify-center font-bold text-lg text-white">
-                      AF
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="font-bold text-white text-base">Arjuna Fransesco</h3>
-                    <p class="text-xs text-slate-400 font-mono">Data Science Specialist</p>
-                  </div>
-                </div>
-                <div class="p-2 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                  <i class="fa-solid fa-circle-check text-base"></i>
-                </div>
+              <div class="pb-3.5 border-b border-slate-200 dark:border-white/10">
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">Arjuna Fransesco</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-mono">Data Science Specialist</p>
               </div>
 
-              <!-- Quick Metrics Grid with authentic solid accents -->
-              <div class="grid grid-cols-2 gap-3 py-5">
-                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
-                  <span class="text-xs text-slate-400 font-medium">Akademik IPK</span>
-                  <div class="text-2xl font-extrabold text-blue-400">3.83<span class="text-xs text-slate-400 font-normal">/4.00</span></div>
+              <!-- Arjuna Profile Portrait -->
+              <div class="relative w-full h-72 sm:h-80 my-3.5 rounded-2xl overflow-hidden bg-[#0a0d14] border border-slate-200 dark:border-white/15 group/photo shadow-2xl">
+                <img 
+                  src="./assets/arjuna-profile.jpg" 
+                  alt="Arjuna Fransesco" 
+                  class="w-full h-full object-cover object-[center_42%] filter brightness-[0.98] contrast-[1.02] group-hover/photo:scale-105 transition-transform duration-700 ease-out"
+                  loading="eager"
+                />
+              </div>
+
+              <!-- Quick Metrics Grid -->
+              <div class="grid grid-cols-2 gap-3 pb-4">
+                <div class="p-3.5 rounded-2xl bg-slate-100/80 dark:bg-white/[0.04] border border-slate-200 dark:border-white/5 space-y-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Academic GPA</span>
+                  <div class="text-2xl font-extrabold text-blue-500 dark:text-blue-400">3.83<span class="text-xs text-slate-400 font-normal">/4.00</span></div>
                 </div>
 
-                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
-                  <span class="text-xs text-slate-400 font-medium">SMAN 2 Kediri</span>
-                  <div class="text-2xl font-extrabold text-indigo-400">93.0<span class="text-xs text-slate-400 font-normal"> Nilai</span></div>
+                <div class="p-3.5 rounded-2xl bg-slate-100/80 dark:bg-white/[0.04] border border-slate-200 dark:border-white/5 space-y-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">SMAN 2 Kediri</span>
+                  <div class="text-2xl font-extrabold text-indigo-500 dark:text-indigo-400">93.0<span class="text-xs text-slate-400 font-normal"> Score</span></div>
                 </div>
 
-                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
-                  <span class="text-xs text-slate-400 font-medium">Sertifikasi AWS</span>
-                  <div class="text-lg font-bold text-amber-400 flex items-center gap-1.5">
-                    <i class="fa-brands fa-aws text-amber-400"></i> Certified
+                <div class="p-3.5 rounded-2xl bg-slate-100/80 dark:bg-white/[0.04] border border-slate-200 dark:border-white/5 space-y-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">AWS Certification</span>
+                  <div class="text-lg font-bold text-amber-500 dark:text-amber-400 flex items-center gap-1.5">
+                    <i class="fa-brands fa-aws text-amber-500 dark:text-amber-400"></i> Certified
                   </div>
                 </div>
 
-                <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/5 space-y-1">
-                  <span class="text-xs text-slate-400 font-medium">Career Focus</span>
-                  <div class="text-lg font-bold text-cyan-400">Data & ML</div>
+                <div class="p-3.5 rounded-2xl bg-slate-100/80 dark:bg-white/[0.04] border border-slate-200 dark:border-white/5 space-y-1">
+                  <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Career Focus</span>
+                  <div class="text-lg font-bold text-cyan-600 dark:text-cyan-400">Data & ML</div>
                 </div>
               </div>
 
               <!-- Live Status Pill -->
-              <div class="p-3 rounded-2xl bg-white/[0.04] border border-white/5 flex items-center justify-between text-xs">
-                <span class="text-slate-300">Open for Collaboration & Roles</span>
-                <span class="flex items-center gap-1.5 text-emerald-400 font-semibold font-mono">
+              <div class="p-3 rounded-2xl bg-slate-100/80 dark:bg-white/[0.04] border border-slate-200 dark:border-white/5 flex items-center justify-between text-xs">
+                <span class="text-slate-600 dark:text-slate-300">Open for Collaboration & Roles</span>
+                <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-semibold font-mono">
                   <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Available
                 </span>
               </div>
@@ -357,14 +465,10 @@
     </section>
 
     <!-- LIVE INTERACTIVE ML LAB & TERMINAL SECTION -->
-    <section id="interactive-lab" class="space-y-6">
+    <section id="interactive-lab" class="space-y-6 reveal-on-scroll">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-400 mb-1">
-            <i class="fa-solid fa-microchip"></i> Interactive Widgets
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Simulasi Interaktif & Data Playground</h2>
-          <p class="text-slate-400 text-sm">Coba langsung model prediksi machine learning dan terminal interaktif di browser Anda.</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Interactive Simulations & Data Playground</h2>
         </div>
       </div>
 
@@ -372,17 +476,17 @@
         
         <!-- Left: Live ML Churn Prediction Simulator -->
         <div class="lg:col-span-7 ios-glass-card rounded-3xl p-6 sm:p-8 space-y-6">
-          <div class="flex items-center justify-between border-b border-white/10 pb-4">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-4">
             <div class="flex items-center gap-2.5">
-              <div class="p-2 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
+              <div class="p-2 rounded-xl bg-blue-500/20 text-blue-500 dark:text-blue-400 border border-blue-500/30">
                 <i class="fa-solid fa-chart-line text-base"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base text-white">Live Customer Churn Risk Calculator</h3>
-                <p class="text-xs text-slate-400">Scikit-learn logistic & weighting algorithm simulation</p>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Live Customer Churn Risk Calculator</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Scikit-learn logistic & weighting algorithm simulation</p>
               </div>
             </div>
-            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">Client-Side ML</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300">Client-Side ML</span>
           </div>
 
           <!-- Controls -->
@@ -390,60 +494,60 @@
             <!-- Tenure slider -->
             <div class="space-y-2">
               <div class="flex justify-between text-xs font-medium">
-                <span class="text-slate-300">Masa Langganan (Tenure)</span>
-                <span id="valTenure" class="font-mono text-blue-400 font-bold">12 Bulan</span>
+                <span class="text-slate-600 dark:text-slate-300">Subscription Tenure</span>
+                <span id="valTenure" class="font-mono text-blue-500 dark:text-blue-400 font-bold">12 Months</span>
               </div>
-              <input id="inputTenure" type="range" min="1" max="72" value="12" oninput="updateMLPrediction()" class="w-full accent-blue-500 bg-white/10 h-2 rounded-lg cursor-pointer">
+              <input id="inputTenure" type="range" min="1" max="72" value="12" oninput="updateMLPrediction()" class="w-full accent-blue-500 bg-slate-200 dark:bg-white/10 h-2 rounded-lg cursor-pointer">
             </div>
 
             <!-- Monthly Charges slider -->
             <div class="space-y-2">
               <div class="flex justify-between text-xs font-medium">
-                <span class="text-slate-300">Biaya Bulanan ($)</span>
-                <span id="valCharges" class="font-mono text-purple-400 font-bold">$70.00</span>
+                <span class="text-slate-600 dark:text-slate-300">Monthly Charges ($)</span>
+                <span id="valCharges" class="font-mono text-sky-500 dark:text-sky-400 font-bold">$70.00</span>
               </div>
-              <input id="inputCharges" type="range" min="15" max="150" value="70" oninput="updateMLPrediction()" class="w-full accent-purple-500 bg-white/10 h-2 rounded-lg cursor-pointer">
+              <input id="inputCharges" type="range" min="15" max="150" value="70" oninput="updateMLPrediction()" class="w-full accent-blue-500 bg-slate-200 dark:bg-white/10 h-2 rounded-lg cursor-pointer">
             </div>
 
             <!-- Contract Type -->
             <div class="space-y-2">
-              <label class="text-xs font-medium text-slate-300">Tipe Kontrak</label>
-              <select id="inputContract" onchange="updateMLPrediction()" class="w-full bg-[#161822] text-sm text-slate-200 border border-white/10 rounded-xl px-3 py-2 outline-none focus:border-blue-500">
-                <option value="month">Month-to-Month (Resiko Tinggi)</option>
+              <label class="text-xs font-medium text-slate-600 dark:text-slate-300">Contract Type</label>
+              <select id="inputContract" onchange="updateMLPrediction()" class="w-full bg-white dark:bg-[#161822] text-sm text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10 rounded-xl px-3 py-2 outline-none focus:border-blue-500">
+                <option value="month">Month-to-Month (High Risk)</option>
                 <option value="one_year">1 Year Contract</option>
-                <option value="two_year">2 Year Contract (Resiko Rendah)</option>
+                <option value="two_year">2 Year Contract (Low Risk)</option>
               </select>
             </div>
 
             <!-- Internet Service -->
             <div class="space-y-2">
-              <label class="text-xs font-medium text-slate-300">Layanan Internet</label>
-              <select id="inputInternet" onchange="updateMLPrediction()" class="w-full bg-[#161822] text-sm text-slate-200 border border-white/10 rounded-xl px-3 py-2 outline-none focus:border-blue-500">
+              <label class="text-xs font-medium text-slate-600 dark:text-slate-300">Internet Service</label>
+              <select id="inputInternet" onchange="updateMLPrediction()" class="w-full bg-white dark:bg-[#161822] text-sm text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10 rounded-xl px-3 py-2 outline-none focus:border-blue-500">
                 <option value="fiber">Fiber Optic</option>
                 <option value="dsl">DSL</option>
-                <option value="no">Tidak Ada Internet</option>
+                <option value="no">No Internet Service</option>
               </select>
             </div>
           </div>
 
           <!-- ML Gauge & Output -->
-          <div class="p-5 rounded-2xl bg-black/30 border border-white/5 flex flex-col sm:flex-row items-center gap-6">
+          <div class="p-5 rounded-2xl bg-slate-100 dark:bg-black/30 border border-slate-200 dark:border-white/5 flex flex-col sm:flex-row items-center gap-6">
             <div class="relative w-24 h-24 flex items-center justify-center shrink-0">
               <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
-                <path class="text-white/10" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="text-slate-200 dark:text-white/10" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                 <path id="gaugePath" class="text-amber-500 transition-all duration-500" stroke-dasharray="65, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
               </svg>
-              <span id="gaugeText" class="absolute text-lg font-bold font-mono text-white">65%</span>
+              <span id="gaugeText" class="absolute text-lg font-bold font-mono text-slate-900 dark:text-white">65%</span>
             </div>
 
             <div class="space-y-1 text-center sm:text-left">
               <div class="flex items-center justify-center sm:justify-start gap-2">
-                <span id="riskBadge" class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30">
+                <span id="riskBadge" class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30">
                   Medium Churn Risk
                 </span>
               </div>
-              <p id="recommendationText" class="text-xs text-slate-300 leading-relaxed">
-                Pelanggan memiliki probabilitas churn sedang. Rekomendasi: tawarkan transisi diskon kontrak 1 tahun.
+              <p id="recommendationText" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Moderate churn probability. Recommendation: offer loyalty discount transition to 1-year contract.
               </p>
             </div>
           </div>
@@ -452,27 +556,27 @@
         <!-- Right: Interactive CLI Terminal -->
         <div class="lg:col-span-5 ios-glass-card rounded-3xl p-6 flex flex-col font-mono text-xs space-y-3">
           <!-- Terminal Header -->
-          <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-3">
             <div class="flex items-center gap-2">
               <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
               <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
               <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-              <span class="text-slate-400 ml-2 font-semibold">arjuna@datascience:~</span>
+              <span class="text-slate-500 dark:text-slate-400 ml-2 font-semibold">arjuna@datascience:~</span>
             </div>
-            <span class="text-[10px] text-slate-500">v2.6-interactive</span>
+            <span class="text-[10px] text-slate-400 dark:text-slate-500">v2.6-interactive</span>
           </div>
 
           <!-- Terminal Output Screen -->
-          <div id="terminalOutput" class="flex-1 overflow-y-auto max-h-[220px] space-y-1 text-slate-300 pr-1">
-            <p class="text-emerald-400">✓ Welcome to Arjuna's Interactive Terminal.</p>
-            <p class="text-slate-400">Type <span class="text-blue-400 font-bold">'help'</span> to see available commands (skills, exp, cv, contact, clear).</p>
+          <div id="terminalOutput" class="flex-1 overflow-y-auto max-h-[220px] space-y-1 text-slate-700 dark:text-slate-300 pr-1">
+            <p class="text-emerald-600 dark:text-emerald-400 font-semibold">✓ Welcome to Arjuna's Interactive Terminal.</p>
+            <p class="text-slate-500 dark:text-slate-400">Type <span class="text-blue-500 dark:text-blue-400 font-bold">'help'</span> to see available commands (skills, exp, cv, contact, clear).</p>
           </div>
 
           <!-- Terminal Input Line -->
-          <form onsubmit="handleTerminalCommand(event)" class="flex items-center gap-2 pt-2 border-t border-white/10">
-            <span class="text-emerald-400 font-bold">$</span>
-            <input id="termInput" type="text" autocomplete="off" placeholder="try typing 'skills' or 'cv'..." class="flex-1 bg-transparent text-slate-100 outline-none font-mono">
-            <button type="submit" class="text-xs text-blue-400 hover:text-white px-2.5 py-1 rounded bg-white/5">Enter</button>
+          <form onsubmit="handleTerminalCommand(event)" class="flex items-center gap-2 pt-2 border-t border-slate-200 dark:border-white/10">
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold">$</span>
+            <input id="termInput" type="text" autocomplete="off" placeholder="try typing 'skills' or 'cv'..." class="flex-1 bg-transparent text-slate-900 dark:text-slate-100 outline-none font-mono">
+            <button type="submit" class="text-xs text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-white px-2.5 py-1 rounded bg-slate-200 dark:bg-white/5 font-semibold">Enter</button>
           </form>
         </div>
 
@@ -480,13 +584,13 @@
     </section>
 
     <!-- EXPERIENCE & EDUCATION SECTION -->
-    <section id="experience" class="space-y-8">
+    <section id="experience" class="space-y-8 reveal-on-scroll">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-indigo-400 mb-1">
-            <i class="fa-solid fa-briefcase"></i> Riwayat Karier & Pendidikan
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-indigo-500 dark:text-indigo-400 mb-1">
+            <i class="fa-solid fa-briefcase"></i> Career & Academic Background
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Pengalaman Kerja & Studi</h2>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Work Experience & Studies</h2>
         </div>
       </div>
 
@@ -494,110 +598,161 @@
         
         <!-- Experience Column -->
         <div class="space-y-4">
-          <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <i class="fa-solid fa-clock-rotate-left text-blue-400"></i> Pengalaman Profesional
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-clock-rotate-left text-blue-500 dark:text-blue-400"></i> Professional Experience
           </h3>
 
-          <!-- Exp 1 -->
-          <div class="ios-glass-card rounded-2xl p-6 space-y-3 spotlight-card">
-            <div class="flex justify-between items-start">
-              <div>
-                <h4 class="font-bold text-base text-white">IT Engineer</h4>
-                <p class="text-xs text-blue-400 font-medium">Freelance / Self-Employed</p>
+          <!-- Interactive Vertical Timeline Track (100% Dead-Center Alignment) -->
+          <div class="relative space-y-6 before:absolute before:top-5 before:bottom-5 before:left-[15px] before:w-[2px] before:-translate-x-1/2 before:bg-gradient-to-b before:from-blue-500 before:via-indigo-500/40 before:to-slate-300 dark:before:to-white/10">
+            
+            <!-- Exp 1: IT Engineer (Active Now) -->
+            <div class="relative flex items-start gap-4 sm:gap-5 group reveal-on-scroll">
+              <!-- Exact Centered Node Dot -->
+              <div class="relative z-10 w-[30px] h-[30px] flex items-center justify-center shrink-0">
+                <div class="w-7 h-7 rounded-full bg-blue-500/20 border-2 border-blue-500 dark:border-blue-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                  <span class="absolute w-7 h-7 rounded-full bg-blue-400/40 animate-ping"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-500 dark:bg-blue-400 shadow-[0_0_8px_#38bdf8]"></span>
+                </div>
               </div>
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
-                Juni 2026 - Sekarang
-              </span>
-            </div>
-            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
-              <li>Mengerjakan proyek machine learning: data preprocessing, visualisasi, pelatihan model, evaluasi, dan analisis prediksi.</li>
-              <li>Mengembangkan aplikasi berbasis web, dashboard, dan sistem informasi sesuai kebutuhan klien serta dokumentasi teknis.</li>
-              <li>Mendukung penyelesaian proyek end-to-end, mulai dari analisis kebutuhan hingga final delivery.</li>
-            </ul>
-            <div class="flex flex-wrap gap-2 pt-1">
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Python</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Machine Learning</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Data Preprocessing</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Dashboard</span>
-            </div>
-          </div>
 
-          <!-- Exp 2 -->
-          <div class="ios-glass-card rounded-2xl p-6 space-y-3 spotlight-card">
-            <div class="flex justify-between items-start">
-              <div>
-                <h4 class="font-bold text-base text-white">Software QA & Flutter Developer Intern</h4>
-                <p class="text-xs text-indigo-400 font-medium">CV Adisatya IT Consultant</p>
-              </div>
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
-                Juni 2026 - Sekarang
-              </span>
-            </div>
-            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
-              <li>Melakukan functional, manual, dan regression testing pada <span class="text-white font-medium">Abel (Ayo Belajar)</span>, aplikasi pembelajaran berbasis Flutter.</li>
-              <li>Mengidentifikasi, mereproduksi, dan mendokumentasikan bug serta isu UI/UX, berkolaborasi dalam perbaikan fitur.</li>
-            </ul>
-            <div class="flex flex-wrap gap-2 pt-1">
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Flutter</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">QA Testing</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">UI/UX Audit</span>
-            </div>
-          </div>
+              <!-- Card Content -->
+              <div class="flex-1 ios-glass-card rounded-2xl p-5 sm:p-6 space-y-3 spotlight-card border border-blue-500/25 hover:border-blue-400/50 transition-all">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-300 transition-colors">IT Engineer</h4>
+                    <p class="text-xs text-blue-600 dark:text-blue-400 font-medium flex items-center gap-1.5 mt-0.5">
+                      <i class="fa-solid fa-laptop-code text-xs"></i> Freelance / Self-Employed
+                    </p>
+                  </div>
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-mono px-3 py-1 rounded-full bg-blue-500/15 text-blue-600 dark:text-blue-300 border border-blue-500/30 font-semibold shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Jun 2026 - Present
+                  </span>
+                </div>
 
-          <!-- Exp 3 -->
-          <div class="ios-glass-card rounded-2xl p-6 space-y-3 spotlight-card">
-            <div class="flex justify-between items-start">
-              <div>
-                <h4 class="font-bold text-base text-white">Full Stack Web Developer</h4>
-                <p class="text-xs text-emerald-400 font-medium">Anita Konveksi (Project Based)</p>
+                <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+                  <li>Engineered end-to-end machine learning workflows: data preprocessing, exploratory visualization, model training, evaluation, and predictive analytics.</li>
+                  <li>Developed custom web-based applications, dashboards, and information systems aligned with client specifications and rigorous technical documentation.</li>
+                  <li>Delivered full lifecycle project execution from initial requirements analysis through final deployment.</li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-white/5">
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">Python</span>
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">Machine Learning</span>
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">Data Preprocessing</span>
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">Dashboards</span>
+                </div>
               </div>
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
-                Feb 2026 - Jun 2026
-              </span>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Mengembangkan dan mengimplementasikan fitur front-end dan back-end menggunakan <span class="text-white font-medium">Laravel dan MySQL</span> untuk mendukung kebutuhan operasional bisnis konveksi.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-1">
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Laravel</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">MySQL</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/5 text-slate-300 border border-white/10">Full Stack</span>
+
+            <!-- Exp 2: Software QA & Flutter Developer Intern (Active Now) -->
+            <div class="relative flex items-start gap-4 sm:gap-5 group reveal-on-scroll">
+              <!-- Exact Centered Node Dot -->
+              <div class="relative z-10 w-[30px] h-[30px] flex items-center justify-center shrink-0">
+                <div class="w-7 h-7 rounded-full bg-indigo-500/20 border-2 border-indigo-500 dark:border-indigo-400 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                  <span class="absolute w-7 h-7 rounded-full bg-indigo-400/40 animate-ping"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 dark:bg-indigo-400 shadow-[0_0_8px_#818cf8]"></span>
+                </div>
+              </div>
+
+              <!-- Card Content -->
+              <div class="flex-1 ios-glass-card rounded-2xl p-5 sm:p-6 space-y-3 spotlight-card border border-indigo-500/25 hover:border-indigo-400/50 transition-all">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-indigo-500 dark:group-hover:text-indigo-300 transition-colors">Software QA & Flutter Developer Intern</h4>
+                    <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium flex items-center gap-1.5 mt-0.5">
+                      <i class="fa-solid fa-mobile-screen-button text-xs"></i> CV Adisatya IT Consultant
+                    </p>
+                  </div>
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-mono px-3 py-1 rounded-full bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 border border-indigo-500/30 font-semibold shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Jun 2026 - Present
+                  </span>
+                </div>
+
+                <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+                  <li>Performed comprehensive functional, manual, and regression quality assurance on <span class="text-slate-900 dark:text-white font-semibold">Abel (Ayo Belajar)</span>, a Flutter-based educational mobile application.</li>
+                  <li>Identified, reproduced, and systematically documented bugs and UI/UX inconsistencies, partnering closely with developers to refine features.</li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-white/5">
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">Flutter</span>
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">QA Testing</span>
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">UI/UX Audit</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Exp 3: Full Stack Web Developer (Completed) -->
+            <div class="relative flex items-start gap-4 sm:gap-5 group reveal-on-scroll">
+              <!-- Exact Centered Node Dot -->
+              <div class="relative z-10 w-[30px] h-[30px] flex items-center justify-center shrink-0">
+                <div class="w-7 h-7 rounded-full bg-slate-200 dark:bg-[#12131A] border-2 border-slate-400 dark:border-white/25 group-hover:border-emerald-500 dark:group-hover:border-emerald-400 flex items-center justify-center transition-all duration-300 shadow-md">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 dark:bg-emerald-400/80 group-hover:bg-emerald-400 transition-colors"></span>
+                </div>
+              </div>
+
+              <!-- Card Content -->
+              <div class="flex-1 ios-glass-card rounded-2xl p-5 sm:p-6 space-y-3 spotlight-card border border-slate-200 dark:border-white/10 hover:border-emerald-500/40 transition-all">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">Full Stack Web Developer</h4>
+                    <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium flex items-center gap-1.5 mt-0.5">
+                      <i class="fa-solid fa-code text-xs"></i> Anita Konveksi (Project Based)
+                    </p>
+                  </div>
+                  <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-500/20 font-medium">
+                    Feb 2026 - Jun 2026
+                  </span>
+                </div>
+
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Architected and implemented front-end and back-end modules using <span class="text-slate-900 dark:text-white font-medium">Laravel and MySQL</span> to optimize garment manufacturing production tracking and order inventory management.
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-white/5">
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">Laravel</span>
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">MySQL</span>
+                  <span class="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">Full Stack</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
         <!-- Education & Organizations Column -->
         <div class="space-y-6">
           <div class="space-y-4">
-            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-              <i class="fa-solid fa-graduation-cap text-purple-400"></i> Pendidikan Formal
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap text-purple-500 dark:text-purple-400"></i> Formal Education
             </h3>
 
             <!-- Edu 1 -->
             <div class="ios-glass-card rounded-2xl p-6 space-y-2 spotlight-card">
               <div class="flex justify-between items-start">
                 <div>
-                  <h4 class="font-bold text-base text-white">D3 Manajemen Informatika</h4>
-                  <p class="text-xs text-blue-400">Politeknik Negeri Malang (Polinema)</p>
+                  <h4 class="font-bold text-base text-slate-900 dark:text-white">Diploma in Informatics Management</h4>
+                  <p class="text-xs text-blue-600 dark:text-blue-400 font-medium">State Polytechnic of Malang (Polinema)</p>
                 </div>
                 <div class="text-right">
-                  <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">IPK: 3.83</span>
-                  <p class="text-[10px] text-slate-500 mt-1">2024 - 2027</p>
+                  <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">GPA: 3.83</span>
+                  <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-1">2024 - 2027</p>
                 </div>
               </div>
-              <p class="text-xs text-slate-300">Fokus studi pada Data Science, Database Systems, Algoritma Pemrograman, dan Web Engineering.</p>
+              <p class="text-xs text-slate-600 dark:text-slate-300">Core coursework: Data Science, Database Systems, Algorithm Design, and Web Engineering.</p>
             </div>
 
             <!-- Edu 2 -->
             <div class="ios-glass-card rounded-2xl p-6 space-y-2 spotlight-card">
               <div class="flex justify-between items-start">
                 <div>
-                  <h4 class="font-bold text-base text-white">SMA IPS</h4>
-                  <p class="text-xs text-slate-300">SMAN 2 Kota Kediri</p>
+                  <h4 class="font-bold text-base text-slate-900 dark:text-white">High School Diploma (Social Sciences)</h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-300">SMAN 2 Kota Kediri</p>
                 </div>
                 <div class="text-right">
-                  <span class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Nilai: 93</span>
-                  <p class="text-[10px] text-slate-500 mt-1">2021 - 2024</p>
+                  <span class="text-xs font-mono font-bold text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Score: 93</span>
+                  <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-1">2021 - 2024</p>
                 </div>
               </div>
             </div>
@@ -605,23 +760,23 @@
 
           <!-- Organizations -->
           <div class="space-y-4 pt-2">
-            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-              <i class="fa-solid fa-users text-cyan-400"></i> Pengalaman Organisasi
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-users text-cyan-600 dark:text-cyan-400"></i> Organizational Experience
             </h3>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="ios-glass-card rounded-2xl p-5 space-y-2">
-                <div class="text-xs font-mono text-cyan-400">Jan 2026 - Sekarang</div>
-                <h4 class="font-bold text-sm text-white">Advokasi</h4>
-                <p class="text-xs text-slate-400">UKM English Club Polinema</p>
-                <p class="text-[11px] text-slate-300">Menyalurkan aspirasi anggota dan koordinasi komunikasi organisasi.</p>
+              <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+                <div class="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-semibold">Jan 2026 - Present</div>
+                <h4 class="font-bold text-sm text-slate-900 dark:text-white">Advocacy Lead</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400">UKM English Club Polinema</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">Facilitating member feedback and managing inter-organizational communication channels.</p>
               </div>
 
-              <div class="ios-glass-card rounded-2xl p-5 space-y-2">
-                <div class="text-xs font-mono text-amber-400">Apr 2022 - Apr 2023</div>
-                <h4 class="font-bold text-sm text-white">Bendahara</h4>
-                <p class="text-xs text-slate-400">Takmir Masjid Al-Anwar (TMA)</p>
-                <p class="text-[11px] text-slate-300">Menyusun RAB dan pencatatan kas organisasi secara transparan.</p>
+              <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+                <div class="text-xs font-mono text-amber-600 dark:text-amber-400 font-semibold">Apr 2022 - Apr 2023</div>
+                <h4 class="font-bold text-sm text-slate-900 dark:text-white">Treasurer</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Takmir Masjid Al-Anwar (TMA)</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">Formulated operational budget plans (RAB) and managed organizational cash flow transparently.</p>
               </div>
             </div>
           </div>
@@ -632,13 +787,13 @@
     </section>
 
     <!-- SKILLS MATRIX & CERTIFICATIONS SECTION -->
-    <section id="skills" class="space-y-8">
+    <section id="skills" class="space-y-8 reveal-on-scroll">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">
-            <i class="fa-solid fa-cubes"></i> Kompetensi & Lisensi
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-500 dark:text-blue-400 mb-1">
+            <i class="fa-solid fa-cubes"></i> Competencies & Credentials
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Keterampilan & Sertifikasi</h2>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Skills & Official Certifications</h2>
         </div>
       </div>
 
@@ -646,19 +801,19 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
         
         <!-- Data Science & ML Skills -->
-        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start">
+        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start hover:border-blue-500/30 transition-all">
           <div class="flex items-center gap-3">
-            <div class="p-2 sm:p-2.5 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
+            <div class="p-2 sm:p-2.5 rounded-xl bg-blue-500/20 text-blue-500 dark:text-blue-400 border border-blue-500/30">
               <i class="fa-brands fa-python text-base sm:text-lg"></i>
             </div>
-            <h3 class="font-bold text-sm sm:text-base text-white">Data Science & ML</h3>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Data Science & ML</h3>
           </div>
           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
-            <span class="skill-pill"><i class="fa-brands fa-python text-blue-400"></i> Python</span>
-            <span class="skill-pill"><i class="fa-solid fa-brain text-purple-400"></i> Machine Learning</span>
-            <span class="skill-pill"><i class="fa-solid fa-filter text-cyan-400"></i> Data Preprocessing</span>
-            <span class="skill-pill"><i class="fa-solid fa-chart-pie text-emerald-400"></i> Data Visualization</span>
-            <span class="skill-pill"><i class="fa-solid fa-square-poll-vertical text-amber-400"></i> Model Evaluation</span>
+            <span class="skill-pill"><i class="fa-brands fa-python text-blue-500 dark:text-blue-400"></i> Python</span>
+            <span class="skill-pill"><i class="fa-solid fa-brain text-sky-500 dark:text-sky-400"></i> Machine Learning</span>
+            <span class="skill-pill"><i class="fa-solid fa-filter text-blue-500 dark:text-blue-400"></i> Data Preprocessing</span>
+            <span class="skill-pill"><i class="fa-solid fa-chart-pie text-cyan-600 dark:text-cyan-400"></i> Data Visualization</span>
+            <span class="skill-pill"><i class="fa-solid fa-square-poll-vertical text-indigo-500 dark:text-indigo-400"></i> Model Evaluation</span>
             <span class="skill-pill">Scikit-Learn</span>
             <span class="skill-pill">XGBoost</span>
             <span class="skill-pill">Deep Learning (CNN)</span>
@@ -666,39 +821,39 @@
         </div>
 
         <!-- Database & Software Engineering -->
-        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start">
+        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start hover:border-indigo-500/30 transition-all">
           <div class="flex items-center gap-3">
-            <div class="p-2 sm:p-2.5 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30">
+            <div class="p-2 sm:p-2.5 rounded-xl bg-indigo-500/20 text-indigo-500 dark:text-indigo-400 border border-indigo-500/30">
               <i class="fa-solid fa-database text-base sm:text-lg"></i>
             </div>
-            <h3 class="font-bold text-sm sm:text-base text-white">Software & DB</h3>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Software & DB</h3>
           </div>
           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
-            <span class="skill-pill"><i class="fa-solid fa-database text-amber-400"></i> SQL / MySQL</span>
-            <span class="skill-pill"><i class="fa-solid fa-file-excel text-emerald-400"></i> Microsoft Excel</span>
-            <span class="skill-pill"><i class="fa-brands fa-laravel text-rose-500"></i> Laravel (PHP)</span>
-            <span class="skill-pill"><i class="fa-brands fa-flutter text-cyan-400"></i> Flutter</span>
-            <span class="skill-pill"><i class="fa-brands fa-github text-slate-200"></i> Git / GitHub</span>
-            <span class="skill-pill"><i class="fa-solid fa-network-wired text-blue-400"></i> RESTful API</span>
-            <span class="skill-pill"><i class="fa-brands fa-html5 text-orange-400"></i> HTML / CSS / JS</span>
+            <span class="skill-pill"><i class="fa-solid fa-database text-blue-500 dark:text-blue-400"></i> SQL / MySQL</span>
+            <span class="skill-pill"><i class="fa-solid fa-file-excel text-emerald-600 dark:text-emerald-400"></i> Microsoft Excel</span>
+            <span class="skill-pill"><i class="fa-brands fa-laravel text-indigo-500 dark:text-indigo-400"></i> Laravel (PHP)</span>
+            <span class="skill-pill"><i class="fa-brands fa-flutter text-sky-500 dark:text-sky-400"></i> Flutter</span>
+            <span class="skill-pill"><i class="fa-brands fa-github text-slate-700 dark:text-slate-200"></i> Git / GitHub</span>
+            <span class="skill-pill"><i class="fa-solid fa-network-wired text-blue-500 dark:text-blue-400"></i> RESTful API</span>
+            <span class="skill-pill"><i class="fa-brands fa-html5 text-sky-500 dark:text-sky-400"></i> HTML / CSS / JS</span>
           </div>
         </div>
 
         <!-- Soft Skills -->
-        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start">
+        <div class="ios-glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 h-full flex flex-col justify-start hover:border-sky-500/30 transition-all">
           <div class="flex items-center gap-3">
-            <div class="p-2 sm:p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+            <div class="p-2 sm:p-2.5 rounded-xl bg-sky-500/20 text-sky-500 dark:text-sky-400 border border-sky-500/30">
               <i class="fa-solid fa-lightbulb text-base sm:text-lg"></i>
             </div>
-            <h3 class="font-bold text-sm sm:text-base text-white">Professional Soft Skills</h3>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Professional Soft Skills</h3>
           </div>
           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
-            <span class="skill-pill"><i class="fa-solid fa-magnifying-glass-chart text-blue-400"></i> Kemampuan Analisis</span>
-            <span class="skill-pill"><i class="fa-solid fa-puzzle-piece text-purple-400"></i> Pemecahan Masalah</span>
-            <span class="skill-pill"><i class="fa-solid fa-stopwatch text-cyan-400"></i> Manajemen Waktu</span>
-            <span class="skill-pill"><i class="fa-solid fa-comments text-emerald-400"></i> Komunikasi Efektif</span>
-            <span class="skill-pill"><i class="fa-solid fa-people-group text-amber-400"></i> Kerja Sama Tim</span>
-            <span class="skill-pill"><i class="fa-solid fa-file-lines text-slate-300"></i> Dokumentasi Teknis</span>
+            <span class="skill-pill"><i class="fa-solid fa-magnifying-glass-chart text-blue-500 dark:text-blue-400"></i> Analytical Thinking</span>
+            <span class="skill-pill"><i class="fa-solid fa-puzzle-piece text-indigo-500 dark:text-indigo-400"></i> Problem Solving</span>
+            <span class="skill-pill"><i class="fa-solid fa-stopwatch text-sky-500 dark:text-sky-400"></i> Time Management</span>
+            <span class="skill-pill"><i class="fa-solid fa-comments text-cyan-600 dark:text-cyan-400"></i> Effective Communication</span>
+            <span class="skill-pill"><i class="fa-solid fa-people-group text-blue-500 dark:text-blue-400"></i> Team Collaboration</span>
+            <span class="skill-pill"><i class="fa-solid fa-file-lines text-slate-600 dark:text-slate-300"></i> Technical Documentation</span>
           </div>
         </div>
 
@@ -706,48 +861,48 @@
 
       <!-- Certifications Carousel/Grid -->
       <div class="pt-4 space-y-4">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <i class="fa-solid fa-certificate text-amber-400"></i> Sertifikasi & Kursus Resmi
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <i class="fa-solid fa-certificate text-blue-500 dark:text-blue-400"></i> Certifications & Verified Courses
         </h3>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           
-          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card border border-slate-200 dark:border-white/10 hover:border-amber-500/40 transition-all">
             <div class="flex justify-between items-start">
-              <span class="text-[10px] font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 flex items-center gap-1">
+              <span class="text-[10px] font-mono font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 flex items-center gap-1">
                 <i class="fa-brands fa-aws text-xs"></i> AWS (2026)
               </span>
-              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <i class="fa-solid fa-circle-check text-emerald-500 dark:text-emerald-400"></i>
             </div>
-            <h4 class="font-bold text-sm text-white">Data Engineering on AWS</h4>
-            <p class="text-xs text-slate-400">Foundations Level</p>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Data Engineering on AWS</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Foundations Level</p>
           </div>
 
-          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card border border-slate-200 dark:border-white/10 hover:border-blue-500/40 transition-all">
             <div class="flex justify-between items-start">
-              <span class="text-[10px] font-mono font-bold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">Udemy (2026)</span>
-              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <span class="text-[10px] font-mono font-bold text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">Udemy (2026)</span>
+              <i class="fa-solid fa-circle-check text-emerald-500 dark:text-emerald-400"></i>
             </div>
-            <h4 class="font-bold text-sm text-white">Probability & Statistics</h4>
-            <p class="text-xs text-slate-400">Data Science Curriculum</p>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Probability & Statistics</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Data Science Curriculum</p>
           </div>
 
-          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card border border-slate-200 dark:border-white/10 hover:border-indigo-500/40 transition-all">
             <div class="flex justify-between items-start">
-              <span class="text-[10px] font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Udemy (2026)</span>
-              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <span class="text-[10px] font-mono font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">Udemy (2026)</span>
+              <i class="fa-solid fa-circle-check text-emerald-500 dark:text-emerald-400"></i>
             </div>
-            <h4 class="font-bold text-sm text-white">Analytics & Visualization</h4>
-            <p class="text-xs text-slate-400">Using Excel & Python</p>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Analytics & Visualization</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Using Excel & Python</p>
           </div>
 
-          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card">
+          <div class="ios-glass-card rounded-2xl p-5 space-y-2 spotlight-card border border-slate-200 dark:border-white/10 hover:border-sky-500/40 transition-all">
             <div class="flex justify-between items-start">
-              <span class="text-[10px] font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">Course (2026)</span>
-              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <span class="text-[10px] font-mono font-bold text-sky-600 dark:text-sky-400 bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">Course (2026)</span>
+              <i class="fa-solid fa-circle-check text-emerald-500 dark:text-emerald-400"></i>
             </div>
-            <h4 class="font-bold text-sm text-white">Intro to Data Analytics</h4>
-            <p class="text-xs text-slate-400">Mini Course Certificate</p>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Intro to Data Analytics</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Mini Course Certificate</p>
           </div>
 
         </div>
@@ -755,229 +910,370 @@
     </section>
 
     <!-- FEATURED PROJECTS SHOWCASE -->
-    <section id="projects" class="space-y-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
-            <i class="fa-solid fa-folder-closed"></i> Portofolio Unggulan
+    <section id="projects" class="space-y-8 reveal-on-scroll">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+        <div class="max-w-xl">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-500 dark:text-blue-400 mb-1">
+            <i class="fa-solid fa-folder-closed"></i> Featured Portfolio
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Proyek & Karya Teknologi</h2>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-liquid-gradient">Projects & Technical Works</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Exploration of machine learning systems, computer vision models, data engineering pipelines, and interactive web tools.</p>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="inline-flex p-1 rounded-2xl ios-glass border border-white/10 gap-1 text-xs">
-          <button onclick="filterProjects('all', this)" class="px-3.5 py-1.5 rounded-xl font-semibold bg-white/15 text-white transition-all">Semua</button>
-          <button onclick="filterProjects('ml', this)" class="px-3.5 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white transition-all">Data & ML</button>
-          <button onclick="filterProjects('web', this)" class="px-3.5 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white transition-all">Web & Mobile</button>
+        <!-- Filter Tabs (Single-Row Clean Glass Pill) -->
+        <div class="flex items-center gap-1 sm:gap-1.5 p-1 sm:p-1.5 rounded-2xl ios-glass border border-slate-200 dark:border-white/10 text-xs overflow-x-auto max-w-full shrink-0 no-scrollbar">
+          <button onclick="filterProjects('all', this)" class="px-3 sm:px-3.5 py-1.5 rounded-xl font-semibold bg-slate-200 dark:bg-white/15 text-slate-900 dark:text-white transition-all whitespace-nowrap">All</button>
+          <button onclick="filterProjects('ml', this)" class="px-3 sm:px-3.5 py-1.5 rounded-xl font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all whitespace-nowrap">Machine Learning</button>
+          <button onclick="filterProjects('cv', this)" class="px-3 sm:px-3.5 py-1.5 rounded-xl font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all whitespace-nowrap">Computer Vision</button>
+          <button onclick="filterProjects('ts', this)" class="px-3 sm:px-3.5 py-1.5 rounded-xl font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all whitespace-nowrap">Time Series</button>
+          <button onclick="filterProjects('web', this)" class="px-3 sm:px-3.5 py-1.5 rounded-xl font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all whitespace-nowrap">Data Eng & Web</button>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Project 1: Customer Churn Prediction -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+        <!-- Project 1: Plant Leaf Disease CNN & Grad-CAM -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="cv ml">
           <div class="space-y-3">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">Machine Learning</span>
-              <a href="https://github.com/ArjunaFransesco/customer-churn-prediction" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 font-bold">Computer Vision & DL</span>
+              <a href="https://github.com/ArjunaFransesco/plant-leaf-disease-cnn-gradcam" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
-            <h3 class="font-bold text-lg text-white">Customer Churn Prediction & Retention Analytics</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Pipeline klasifikasi churn pelanggan IBM Telco menggunakan Scikit-Learn dan XGBoost dengan penanganan class imbalance, hyperparameter tuning, dan integrasi UI web interaktif.
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Plant Pathology & Crop Leaf Disease Diagnostic (ResNet50 + Grad-CAM)</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Deep Learning CNN transfer learning diagnostic engine for crop leaf pathology with Grad-CAM heatmap explainability and confusion matrix evaluation.
             </p>
           </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
             <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Scikit-Learn</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">XGBoost</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Flask</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">PyTorch/TF</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">ResNet50</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Grad-CAM</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Streamlit</span>
             </div>
-            <a href="https://github.com/ArjunaFransesco/customer-churn-prediction" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1.5">
-              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            <a href="https://github.com/ArjunaFransesco/plant-leaf-disease-cnn-gradcam" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
             </a>
           </div>
         </div>
 
         <!-- Project 2: Credit Risk Scoring Engine -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ml">
           <div class="space-y-3">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 font-bold">Fintech ML & XAI</span>
-              <a href="https://github.com/ArjunaFransesco/credit-risk-scoring-engine" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 font-bold">Fintech ML & XAI</span>
+              <a href="https://github.com/ArjunaFransesco/credit-risk-scoring-engine" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
-            <h3 class="font-bold text-lg text-white">Credit Risk Assessment & Underwriting Scorecard Engine</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Sistem scorecard kelayakan kredit end-to-end berbasis Weight of Evidence (WoE), Information Value (IV), XGBoost, dan explainable AI (XAI) dengan REST API integration.
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Credit Risk Assessment & Underwriting Scorecard Engine</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              End-to-end credit underwriting scorecard system built on Weight of Evidence (WoE), Information Value (IV), XGBoost, and Explainable AI with REST API integration.
             </p>
           </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
             <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">XGBoost</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">WoE / IV</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">FastAPI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">XGBoost</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">WoE / IV</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">FastAPI</span>
             </div>
-            <a href="https://github.com/ArjunaFransesco/credit-risk-scoring-engine" target="_blank" class="text-xs text-rose-400 hover:text-rose-300 font-semibold flex items-center gap-1.5">
-              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            <a href="https://github.com/ArjunaFransesco/credit-risk-scoring-engine" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
             </a>
           </div>
         </div>
 
         <!-- Project 3: Real Estate Valuation Engine -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ml">
           <div class="space-y-3">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 font-bold">Predictive AI</span>
-              <a href="https://github.com/ArjunaFransesco/real-estate-valuation-engine" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 font-bold">Predictive AI</span>
+              <a href="https://github.com/ArjunaFransesco/real-estate-valuation-engine" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
-            <h3 class="font-bold text-lg text-white">Real Estate Spatial Valuation & Price Regression</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Pipeline valuasi harga properti dengan spatial feature engineering, multi-model stacking regression (LightGBM, CatBoost), serta interpretasi model interaktif menggunakan SHAP dan Streamlit.
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Real Estate Spatial Valuation & Price Regression</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Property valuation pipeline featuring spatial feature engineering, multi-model stacking regression (LightGBM, CatBoost), and interactive SHAP model explainability via Streamlit.
             </p>
           </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
             <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">LightGBM</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">SHAP</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Streamlit</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">LightGBM</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">SHAP</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Streamlit</span>
             </div>
-            <a href="https://github.com/ArjunaFransesco/real-estate-valuation-engine" target="_blank" class="text-xs text-teal-400 hover:text-teal-300 font-semibold flex items-center gap-1.5">
-              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            <a href="https://github.com/ArjunaFransesco/real-estate-valuation-engine" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
             </a>
           </div>
         </div>
 
-        <!-- Project 4: Cardiovascular Disease Prognosis -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+        <!-- Project 4: Supply Chain Demand Forecasting -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ts ml">
           <div class="space-y-3">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 font-bold">Clinical ML</span>
-              <a href="https://github.com/ArjunaFransesco/heart-disease-prediction" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 font-bold">Time Series & Retail</span>
+              <a href="https://github.com/ArjunaFransesco/supply-chain-demand-forecasting" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
-            <h3 class="font-bold text-lg text-white">Cardiovascular Disease Prognosis & Diagnostic Web</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Sistem klasifikasi resiko penyakit jantung klinis dengan benchmarking ensemble classifier, evaluasi AUC-ROC objektif, serta web diagnostik interaktif berbasis Flask.
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Supply Chain Demand Forecasting & Inventory Optimization</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Multi-horizon retail sales forecasting with LightGBM, promotional lift modeling, and dynamic safety stock & reorder point calculation.
             </p>
           </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
             <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Scikit-Learn</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Random Forest</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Flask</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">LightGBM</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Time Series</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Safety Stock</span>
             </div>
-            <a href="https://github.com/ArjunaFransesco/heart-disease-prediction" target="_blank" class="text-xs text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1.5">
-              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            <a href="https://github.com/ArjunaFransesco/supply-chain-demand-forecasting" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
             </a>
           </div>
         </div>
 
-        <!-- Project 5: Rice Leaf CNN -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
+        <!-- Project 5: Smart Grid Power Load Forecasting -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ts ml">
           <div class="space-y-3">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-bold">Deep Learning</span>
-              <a href="https://github.com/ArjunaFransesco/dl_cnn" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 font-bold">Time Series & Energy</span>
+              <a href="https://github.com/ArjunaFransesco/smart-grid-load-forecasting" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
-            <h3 class="font-bold text-lg text-white">Rice Leaf Disease Classification (ResNet50V2)</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Arsitektur CNN transfer learning untuk mendeteksi 4 penyakit daun padi dengan de-duplikasi pHash, group-aware splitting, confidence gating, dan holdout evaluation yang objektif.
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Smart Grid Power Demand Multivariate Forecasting</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Power grid load demand forecasting utilizing cyclical temporal encoding, lag feature engineering, and LightGBM for energy distribution stability.
             </p>
           </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
             <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">TensorFlow</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">ResNet50V2</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Computer Vision</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">LightGBM</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Time Series</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Energy AI</span>
             </div>
-            <a href="https://github.com/ArjunaFransesco/dl_cnn" target="_blank" class="text-xs text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-1.5">
-              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            <a href="https://github.com/ArjunaFransesco/smart-grid-load-forecasting" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
             </a>
           </div>
         </div>
 
-        <!-- Project 6: Anita Konveksi Web -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="web">
+        <!-- Project 6: E-Commerce CLV & Survival Analysis -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ts ml">
           <div class="space-y-3">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Web System</span>
-              <a href="https://github.com/ArjunaFransesco/anita-konveksi" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border border-cyan-500/20 font-bold">Customer Analytics</span>
+              <a href="https://github.com/ArjunaFransesco/ecommerce-clv-survival-pipeline" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
-            <h3 class="font-bold text-lg text-white">Anita Konveksi Management System</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Sistem informasi manajemen produksi, katalog pemesanan, dan inventaris berbasis full-stack Laravel dan MySQL untuk efisiensi operasional bisnis.
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">E-Commerce Customer Lifetime Value & Survival Analysis</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Probabilistic BG/NBD and Gamma-Gamma CLV modeling, RFM customer segmentation, and Kaplan-Meier retention survival analysis.
             </p>
           </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
             <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Laravel</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">MySQL</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Bootstrap/CSS</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">BG/NBD</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Lifelines</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Streamlit</span>
             </div>
-            <a href="https://github.com/ArjunaFransesco/anita-konveksi" target="_blank" class="text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1.5">
-              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            <a href="https://github.com/ArjunaFransesco/ecommerce-clv-survival-pipeline" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
             </a>
           </div>
         </div>
 
-        <!-- Project 7: Abel Flutter QA -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="web">
+        <!-- Project 7: Hospital Readmission Risk Predictor -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ml">
           <div class="space-y-3">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">Mobile QA & Dev</span>
-            </div>
-            <h3 class="font-bold text-lg text-white">Abel (Ayo Belajar) Flutter App</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Pengujian fungsional dan regresi berkala pada aplikasi mobile edukasi berbasis Flutter di CV Adisatya IT Consultant, memastikan stabilitas fitur dan kepatuhan UI/UX.
-            </p>
-          </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
-            <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Flutter</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Dart</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">QA Regression</span>
-            </div>
-            <span class="text-xs text-cyan-400 font-semibold">Internal Consultant Project</span>
-          </div>
-        </div>
-
-        <!-- Project 8: Titanic Kaggle ML -->
-        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card" data-category="ml">
-          <div class="space-y-3">
-            <div class="flex justify-between items-center">
-              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">Data Analytics</span>
-              <a href="https://github.com/ArjunaFransesco/titanic-kaggle-ml" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 font-bold">Clinical ML</span>
+              <a href="https://github.com/ArjunaFransesco/hospital-patient-readmission-risk" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
-            <h3 class="font-bold text-lg text-white">Titanic Survival ML Pipeline</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Eksplorasi data preprocessing, visualisasi korelasi fitur, dan benchmarking model klasifikasi machine learning untuk kompetisi Kaggle Titanic.
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">30-Day Hospital Readmission Risk & Clinical Triage Predictor</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Predictive EHR-based patient readmission stratification model with class imbalance mitigation and objective ROC-AUC validation.
             </p>
           </div>
-          <div class="space-y-3 pt-3 border-t border-white/10">
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
             <div class="flex flex-wrap gap-1.5 text-[10px]">
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Python</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Pandas</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 text-slate-300">Kaggle</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">LightGBM</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Clinical EHR</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">FastAPI</span>
             </div>
-            <a href="https://github.com/ArjunaFransesco/titanic-kaggle-ml" target="_blank" class="text-xs text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1.5">
-              <span>Lihat di GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            <a href="https://github.com/ArjunaFransesco/hospital-patient-readmission-risk" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
             </a>
+          </div>
+        </div>
+
+        <!-- Project 8: Cyber Threat NIDS Detector -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ml">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 font-bold">Cybersecurity AI</span>
+              <a href="https://github.com/ArjunaFransesco/cyber-threat-nids-detector" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Real-time Network Cyber Threat & Zero-Day Anomaly Detector</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Live cyber intrusion detection and network anomaly triage pipeline utilizing Isolation Forests, multi-class Random Forest, and automated alert scoring.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Isolation Forest</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Random Forest</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Cybersecurity</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/cyber-threat-nids-detector" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 9: Modern Data Stack (DuckDB + dbt) -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="web">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 font-bold">Data Engineering</span>
+              <a href="https://github.com/ArjunaFransesco/ecommerce-dbt-duckdb-data-pipeline" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Modern Data Stack (MDS) Pipeline: DuckDB & dbt Core</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              End-to-end modern data stack architecture with DuckDB in-process OLAP, modular dbt transformations, Great Expectations data quality testing, and Star Schema mart.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">DuckDB</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">dbt Core</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">SQL</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Star Schema</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/ecommerce-dbt-duckdb-data-pipeline" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 10: Customer Churn Prediction -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ml">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 font-bold">Machine Learning</span>
+              <a href="https://github.com/ArjunaFransesco/customer-churn-prediction" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Customer Churn Prediction & Retention Analytics UI</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              IBM Telco customer churn classification pipeline using Scikit-Learn and XGBoost with class imbalance handling, hyperparameter tuning, and interactive Flask web UI.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Scikit-Learn</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">XGBoost</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Flask</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/customer-churn-prediction" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 11: Cardiovascular Disease Prognosis -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="ml">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 font-bold">Clinical ML</span>
+              <a href="https://github.com/ArjunaFransesco/heart-disease-prediction" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Cardiovascular Disease Prognosis & Clinical Diagnostic Web</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Clinical heart disease risk prognosis engine with ensemble classifier benchmarking, objective AUC-ROC evaluation, and Flask web diagnostic portal.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Scikit-Learn</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Random Forest</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Flask</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/heart-disease-prediction" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 12: Anita Konveksi Web System -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="web">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border border-cyan-500/20 font-bold">Web System</span>
+              <a href="https://github.com/ArjunaFransesco/anita-konveksi" target="_blank" class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-500/10 dark:bg-white/5 dark:hover:bg-blue-500/10 border border-slate-200 dark:border-white/10 hover:border-blue-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all shrink-0 aspect-square">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Anita Konveksi Production & Inventory ERP Management</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Garment manufacturing management system, order catalog, and inventory ERP powered by full-stack Laravel and MySQL for operational efficiency.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">MySQL</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Bootstrap/CSS</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Full Stack</span>
+            </div>
+            <a href="https://github.com/ArjunaFransesco/anita-konveksi" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold flex items-center gap-1.5">
+              <span>View on GitHub</span> <i class="fa-brands fa-github text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 13: Abel Flutter Educational Mobile App -->
+        <div class="project-card ios-glass-card rounded-3xl p-6 space-y-4 flex flex-col justify-between spotlight-card border border-slate-200 dark:border-white/10 reveal-on-scroll hover:border-blue-500/40 transition-all duration-300 group" data-category="web">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 font-bold">Mobile QA & Dev</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug">Abel (Ayo Belajar) Flutter Mobile Educational App</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Comprehensive functional, manual, and regression quality assurance on Flutter-based educational mobile application at CV Adisatya IT Consultant.
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-200 dark:border-white/10">
+            <div class="flex flex-wrap gap-1.5 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Flutter</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">Dart</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">QA Regression</span>
+            </div>
+            <span class="text-xs text-sky-600 dark:text-sky-400 font-semibold">Internal Consultant Project</span>
           </div>
         </div>
 
@@ -985,33 +1281,33 @@
     </section>
 
     <!-- CONTACT & CONNECT SECTION (iOS Action Sheet style) -->
-    <section id="contact" class="space-y-8">
-      <div class="ios-glass rounded-3xl p-8 sm:p-12 border border-white/15 relative overflow-hidden">
+    <section id="contact" class="space-y-8 reveal-on-scroll">
+      <div class="ios-glass rounded-3xl p-8 sm:p-12 border border-slate-200 dark:border-white/15 relative overflow-hidden">
         <div class="max-w-3xl mx-auto text-center space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15">
-            <i class="fa-solid fa-paper-plane text-emerald-400"></i>
-            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Mari Terhubung</span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/15">
+            <i class="fa-solid fa-paper-plane text-emerald-500 dark:text-emerald-400"></i>
+            <span class="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide">Let's Connect</span>
           </div>
 
           <h2 class="text-3xl sm:text-4xl font-extrabold text-liquid-gradient">
-            Tertarik Berkolaborasi atau Merekrut?
+            Interested in Collaborating or Hiring?
           </h2>
 
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Saya selalu terbuka untuk mendiskusikan proyek Data Science, Machine Learning, konsultasi sistem informasi, maupun peluang magang dan karier.
+          <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            I am always open to discussing Data Science projects, Machine Learning implementations, information system consulting, or internship and career opportunities.
           </p>
 
           <!-- Contact Cards Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
             
             <!-- Email -->
-            <div onclick="copyText('arjunafransesco1@gmail.com', 'Email berhasil disalin!')" class="ios-glass-card rounded-2xl p-5 cursor-pointer group hover:border-blue-500/50">
-              <div class="p-3 rounded-xl bg-blue-500/20 text-blue-400 w-fit mb-3 flex items-center justify-center">
+            <div onclick="copyText('arjunafransesco1@gmail.com', 'Email copied to clipboard!')" class="ios-glass-card rounded-2xl p-5 cursor-pointer group hover:border-blue-500/50">
+              <div class="p-3 rounded-xl bg-blue-500/20 text-blue-500 dark:text-blue-400 w-fit mb-3 flex items-center justify-center">
                 <i class="fa-solid fa-envelope text-lg"></i>
               </div>
-              <span class="text-xs text-slate-400">Email Utama</span>
-              <p class="text-xs font-mono font-bold text-white truncate group-hover:text-blue-400 transition-colors">arjunafransesco1@gmail.com</p>
-              <span class="text-[10px] text-blue-400 mt-2 block">Klik untuk salin</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400">Primary Email</span>
+              <p class="text-xs font-mono font-bold text-slate-900 dark:text-white truncate group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">arjunafransesco1@gmail.com</p>
+              <span class="text-[10px] text-blue-500 dark:text-blue-400 mt-2 block">Click to copy</span>
             </div>
 
             <!-- LinkedIn -->
@@ -1021,21 +1317,21 @@
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
               </div>
-              <span class="text-xs text-slate-400">LinkedIn Profile</span>
-              <p class="text-xs font-bold text-white truncate group-hover:text-blue-400 transition-colors">/in/arjunafransesco</p>
-              <span class="text-[10px] text-blue-400 mt-2 block">Kunjungi profil →</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400">LinkedIn Profile</span>
+              <p class="text-xs font-bold text-slate-900 dark:text-white truncate group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">/in/arjunafransesco</p>
+              <span class="text-[10px] text-blue-500 dark:text-blue-400 mt-2 block">Visit profile →</span>
             </a>
 
             <!-- WhatsApp / Phone -->
             <a href="https://wa.me/6287753462865" target="_blank" onclick="playClick()" class="ios-glass-card rounded-2xl p-5 group hover:border-emerald-500/50 block">
-              <div class="p-3 rounded-xl bg-emerald-500/20 text-emerald-400 w-fit mb-3 flex items-center justify-center">
-                <svg class="w-5 h-5 fill-current text-emerald-400" viewBox="0 0 24 24">
+              <div class="p-3 rounded-xl bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 w-fit mb-3 flex items-center justify-center">
+                <svg class="w-5 h-5 fill-current text-emerald-500 dark:text-emerald-400" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                 </svg>
               </div>
-              <span class="text-xs text-slate-400">WhatsApp / Telp</span>
-              <p class="text-xs font-mono font-bold text-white truncate group-hover:text-emerald-400 transition-colors">+62 877-5346-2865</p>
-              <span class="text-[10px] text-emerald-400 mt-2 block">Kirim pesan langsung →</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400">WhatsApp / Phone</span>
+              <p class="text-xs font-mono font-bold text-slate-900 dark:text-white truncate group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors">+62 877-5346-2865</p>
+              <span class="text-[10px] text-emerald-500 dark:text-emerald-400 mt-2 block">Send direct message →</span>
             </a>
 
           </div>
@@ -1047,23 +1343,23 @@
 
   <!-- iOS Floating Bottom Dock -->
   <nav class="fixed bottom-3.5 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-[96vw] sm:max-w-none">
-    <div class="ios-glass-nav px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center gap-1.5 sm:gap-3 shadow-2xl border border-white/20">
-      <a href="#hero" onclick="playClick()" class="dock-btn text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Home">
+    <div class="ios-glass-nav px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center gap-1.5 sm:gap-3 shadow-2xl border border-slate-200 dark:border-white/20">
+      <a href="#hero" onclick="playClick()" class="dock-btn text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-all" title="Home">
         <i class="fa-solid fa-house text-base sm:text-lg"></i>
       </a>
-      <a href="#interactive-lab" onclick="playClick()" class="dock-btn text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Interactive Lab">
+      <a href="#interactive-lab" onclick="playClick()" class="dock-btn text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-all" title="Interactive Lab">
         <i class="fa-solid fa-terminal text-base sm:text-lg"></i>
       </a>
-      <a href="#experience" onclick="playClick()" class="dock-btn text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Experience & Education">
+      <a href="#experience" onclick="playClick()" class="dock-btn text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-all" title="Experience & Education">
         <i class="fa-solid fa-briefcase text-base sm:text-lg"></i>
       </a>
-      <a href="#skills" onclick="playClick()" class="dock-btn text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Skills">
+      <a href="#skills" onclick="playClick()" class="dock-btn text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-all" title="Skills">
         <i class="fa-solid fa-layer-group text-base sm:text-lg"></i>
       </a>
-      <a href="#projects" onclick="playClick()" class="dock-btn text-slate-300 hover:text-white hover:bg-white/10 transition-all" title="Projects">
+      <a href="#projects" onclick="playClick()" class="dock-btn text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-all" title="Projects">
         <i class="fa-solid fa-folder text-base sm:text-lg"></i>
       </a>
-      <div class="h-4 sm:h-5 w-[1px] bg-white/20 mx-0.5 sm:mx-1"></div>
+      <div class="h-4 sm:h-5 w-[1px] bg-slate-300 dark:bg-white/20 mx-0.5 sm:mx-1"></div>
       <a href="#contact" onclick="playClick()" class="dock-btn bg-[#007AFF] text-white hover:bg-blue-500 shadow-lg shadow-blue-500/35 transition-all" title="Contact Me">
         <i class="fa-solid fa-paper-plane text-base sm:text-lg"></i>
       </a>
@@ -1071,7 +1367,7 @@
   </nav>
 
   <!-- Toast Notification Pill -->
-  <div id="toast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 ios-glass px-4 py-2 rounded-full text-xs font-semibold text-white border border-white/20 shadow-xl opacity-0 translate-y-[-10px] pointer-events-none transition-all duration-300">
+  <div id="toast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 ios-glass px-4 py-2 rounded-full text-xs font-semibold text-slate-900 dark:text-white border border-slate-200 dark:border-white/20 shadow-xl opacity-0 translate-y-[-10px] pointer-events-none transition-all duration-300">
     Notification
   </div>
 
@@ -1079,6 +1375,56 @@
   <script>
     // Initialize Lucide Icons if available
     try { lucide.createIcons(); } catch(e) {}
+
+    // Theme Manager (Dark / Light Mode)
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = savedTheme ? savedTheme === 'dark' : (prefersDark !== false);
+      
+      applyTheme(isDark);
+    }
+
+    function applyTheme(isDark) {
+      const root = document.documentElement;
+      const themeIcon = document.getElementById('themeIcon');
+      
+      if (isDark) {
+        root.classList.add('dark');
+        root.classList.remove('light');
+        document.body.classList.remove('bg-[#F8FAFC]', 'text-slate-900');
+        document.body.classList.add('bg-[#090A0F]', 'text-slate-100');
+        if (themeIcon) {
+          themeIcon.className = 'fa-solid fa-sun text-xs sm:text-sm text-zinc-100';
+        }
+      } else {
+        root.classList.remove('dark');
+        root.classList.add('light');
+        document.body.classList.remove('bg-[#090A0F]', 'text-slate-100');
+        document.body.classList.add('bg-[#F8FAFC]', 'text-slate-900');
+        if (themeIcon) {
+          themeIcon.className = 'fa-solid fa-moon text-xs sm:text-sm text-zinc-900';
+        }
+      }
+    }
+
+    function toggleTheme(e) {
+      if (e) e.stopPropagation();
+      playClick(750, 0.04);
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      const newIsDark = !isCurrentlyDark;
+      
+      if (document.startViewTransition) {
+        document.startViewTransition(() => {
+          applyTheme(newIsDark);
+        });
+      } else {
+        applyTheme(newIsDark);
+      }
+      
+      localStorage.setItem('theme', newIsDark ? 'dark' : 'light');
+      showToast(newIsDark ? 'Dark Mode Enabled' : 'Light Mode Enabled');
+    }
 
     // Sound Synthesizer (Web Audio API - iOS haptic clicks)
     let audioEnabled = true;
@@ -1102,23 +1448,23 @@
     }
 
     function toggleAudio(e) {
-      e.stopPropagation();
+      if (e) e.stopPropagation();
       audioEnabled = !audioEnabled;
       const icon = document.getElementById('soundIcon');
       if (audioEnabled) {
         icon.className = 'fa-solid fa-volume-high text-xs';
-        showToast('Suara haptik diaktifkan');
+        showToast('Haptic sound enabled');
         playClick(800, 0.05);
       } else {
         icon.className = 'fa-solid fa-volume-xmark text-xs';
-        showToast('Suara haptik dimatikan');
+        showToast('Haptic sound muted');
       }
     }
 
     // Live Clock for Dynamic Island
     function updateClock() {
       const now = new Date();
-      const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const timeStr = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
       document.getElementById('islandClock').innerText = timeStr;
     }
     setInterval(updateClock, 1000);
@@ -1143,7 +1489,7 @@
       const contract = document.getElementById('inputContract').value;
       const internet = document.getElementById('inputInternet').value;
 
-      document.getElementById('valTenure').innerText = tenure + ' Bulan';
+      document.getElementById('valTenure').innerText = tenure + (tenure === 1 ? ' Month' : ' Months');
       document.getElementById('valCharges').innerText = '$' + charges.toFixed(2);
 
       // Simulation algorithm: logistic weighting
@@ -1171,19 +1517,19 @@
 
       if (percent >= 65) {
         gaugePath.className.baseVal = 'text-rose-500 transition-all duration-500';
-        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/20 text-rose-400 border border-rose-500/30';
+        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30';
         riskBadge.innerText = 'High Churn Risk';
-        recommendationText.innerText = 'Pelanggan rentan berhenti! Berikan penawaran diskon loyalty kontraktual dan jadwalkan evaluasi kepuasan layanan.';
+        recommendationText.innerText = 'Customer is at high churn risk! Offer contractual loyalty discounts and schedule a service satisfaction review.';
       } else if (percent >= 35) {
         gaugePath.className.baseVal = 'text-amber-500 transition-all duration-500';
-        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30';
+        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30';
         riskBadge.innerText = 'Medium Churn Risk';
-        recommendationText.innerText = 'Probabilitas sedang. Tawarkan add-on layanan bernilai tambah (e.g. Online Security/Tech Support) untuk meningkatkan retensi.';
+        recommendationText.innerText = 'Moderate churn probability. Offer value-added add-on services (e.g., Online Security/Tech Support) to enhance retention.';
       } else {
         gaugePath.className.baseVal = 'text-emerald-500 transition-all duration-500';
-        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        riskBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30';
         riskBadge.innerText = 'Low Churn Risk';
-        recommendationText.innerText = 'Pelanggan sangat loyal dan stabil. Pertahankan kualitas jaringan dan lakukan monitoring penggunaan berkala.';
+        recommendationText.innerText = 'Customer is highly loyal and stable. Maintain reliable network quality and monitor periodic usage.';
       }
     }
 
@@ -1197,35 +1543,35 @@
 
       const output = document.getElementById('terminalOutput');
       const userLine = document.createElement('p');
-      userLine.className = 'text-slate-300 font-bold';
-      userLine.innerHTML = `<span class="text-emerald-400">$</span> ${input.value}`;
+      userLine.className = 'text-slate-700 dark:text-slate-300 font-bold';
+      userLine.innerHTML = `<span class="text-emerald-600 dark:text-emerald-400">$</span> ${input.value}`;
       output.appendChild(userLine);
 
       const respLine = document.createElement('p');
 
       switch(cmd) {
         case 'help':
-          respLine.className = 'text-slate-300';
-          respLine.innerHTML = 'Commands: <span class="text-blue-400">cv</span>, <span class="text-purple-400">skills</span>, <span class="text-emerald-400">exp</span>, <span class="text-amber-400">edu</span>, <span class="text-cyan-400">contact</span>, <span class="text-rose-400">clear</span>';
+          respLine.className = 'text-slate-600 dark:text-slate-300';
+          respLine.innerHTML = 'Commands: <span class="text-blue-500 dark:text-blue-400">cv</span>, <span class="text-indigo-500 dark:text-indigo-400">skills</span>, <span class="text-emerald-600 dark:text-emerald-400">exp</span>, <span class="text-amber-500 dark:text-amber-400">edu</span>, <span class="text-cyan-600 dark:text-cyan-400">contact</span>, <span class="text-rose-500 dark:text-rose-400">clear</span>';
           break;
         case 'cv':
-          respLine.className = 'text-blue-300';
-          respLine.innerText = 'Arjuna Fransesco - Data Scientist & ML Engineer (IPK 3.83, Polinema). Spesialisasi Machine Learning, SQL, Python, Laravel, Flutter.';
+          respLine.className = 'text-blue-600 dark:text-blue-300';
+          respLine.innerText = 'Arjuna Fransesco - Data Scientist & ML Engineer (GPA 3.83, Polinema). Specializing in Machine Learning, SQL, Python, Laravel, and Flutter.';
           break;
         case 'skills':
-          respLine.className = 'text-purple-300';
+          respLine.className = 'text-indigo-600 dark:text-indigo-300';
           respLine.innerText = 'Python, Scikit-Learn, XGBoost, SQL/MySQL, Data Preprocessing, Model Evaluation, Flutter, Laravel, AWS Data Engineering.';
           break;
         case 'exp':
-          respLine.className = 'text-emerald-300';
+          respLine.className = 'text-emerald-600 dark:text-emerald-300';
           respLine.innerText = '1. IT Engineer (Freelance) | 2. QA & Flutter Intern (CV Adisatya) | 3. Full Stack Dev (Anita Konveksi)';
           break;
         case 'edu':
-          respLine.className = 'text-amber-300';
-          respLine.innerText = 'Politeknik Negeri Malang (D3 Manajemen Informatika, IPK 3.83) | SMAN 2 Kota Kediri (Nilai 93)';
+          respLine.className = 'text-amber-600 dark:text-amber-300';
+          respLine.innerText = 'State Polytechnic of Malang (D3 Informatics Management, GPA 3.83) | SMAN 2 Kediri (Score 93)';
           break;
         case 'contact':
-          respLine.className = 'text-cyan-300';
+          respLine.className = 'text-cyan-600 dark:text-cyan-300';
           respLine.innerText = 'Email: arjunafransesco1@gmail.com | WA: +62 877-5346-2865 | LinkedIn: /in/arjunafransesco';
           break;
         case 'clear':
@@ -1233,7 +1579,7 @@
           input.value = '';
           return;
         default:
-          respLine.className = 'text-rose-400';
+          respLine.className = 'text-rose-500 dark:text-rose-400';
           respLine.innerText = `Command not recognized: '${cmd}'. Type 'help' for options.`;
       }
 
@@ -1246,12 +1592,13 @@
     function filterProjects(category, btn) {
       playClick(550, 0.03);
       document.querySelectorAll('#projects button').forEach(b => {
-        b.className = 'px-3.5 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white transition-all';
+        b.className = 'px-3 sm:px-3.5 py-1.5 rounded-xl font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all whitespace-nowrap';
       });
-      btn.className = 'px-3.5 py-1.5 rounded-xl font-semibold bg-white/15 text-white transition-all';
+      btn.className = 'px-3 sm:px-3.5 py-1.5 rounded-xl font-semibold bg-slate-200 dark:bg-white/15 text-slate-900 dark:text-white transition-all whitespace-nowrap';
 
       document.querySelectorAll('.project-card').forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
+        const cat = card.getAttribute('data-category') || '';
+        if (category === 'all' || cat.split(' ').includes(category)) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
@@ -1276,8 +1623,87 @@
       navigator.clipboard.writeText(text).then(() => {
         showToast(msg);
       }).catch(() => {
-        showToast('Gagal menyalin');
+        showToast('Failed to copy');
       });
+    }
+
+    // -------------------------------------------------------------
+    // 1. Creative Scroll In/Out Reveal Engine (IntersectionObserver)
+    // -------------------------------------------------------------
+    function initScrollReveal() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('revealed'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          } else {
+            // Re-arm animation every time element leaves screen (scrolling up or down)
+            entry.target.classList.remove('revealed');
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    }
+
+    // -------------------------------------------------------------
+    // 2. 3D Perspective Card Tilt Physics & Dynamic Spotlight
+    // -------------------------------------------------------------
+    function initCardTilt() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 768) {
+        return;
+      }
+
+      const cards = document.querySelectorAll('.spotlight-card, .project-card');
+      cards.forEach(card => {
+        card.style.transformStyle = 'preserve-3d';
+        card.style.willChange = 'transform';
+
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -6; // max 6 deg tilt
+          const rotateY = ((x - centerX) / centerX) * 6;
+
+          card.style.transition = 'transform 0.08s ease-out';
+          card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
+
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transition = 'transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1)';
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+      });
+    }
+
+    // Initialize all engines on load
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      initCardTilt();
+      initScrollReveal();
+    });
+
+    // Fallback immediate trigger if already loaded
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      initTheme();
+      initCardTilt();
+      initScrollReveal();
     }
   </script>
 </body>
