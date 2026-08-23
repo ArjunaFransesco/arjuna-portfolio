@@ -14,9 +14,11 @@ An interactive, high-performance portfolio website built with **iOS Glassmorphis
 
 ## 🌟 Key Features
 
-* **iOS Dynamic Island Header**: Real-time clock, online activity badge, and Web Audio API haptic sound toggle.
+* **iOS Dynamic Island Header**: Real-time clock, online activity badge, audio haptic sound, and symmetrical theme toggle.
+* **Ultra-Smooth 60fps Theme Engine**: Hardware-accelerated View Transition API for instant, seamless dark/light mode switching.
 * **Interactive ML Playground**: Client-side customer churn risk simulator with live animated circular gauges.
 * **Interactive CLI Terminal**: Interactive web terminal executing commands (`help`, `cv`, `skills`, `exp`, `edu`, `contact`).
+* **Featured Projects Showcase**: Filterable showcase tabs across Machine Learning, Computer Vision, Time Series, and Data Engineering.
 * **iOS Floating Dock Navigation**: Frosted glass dock with smooth navigation anchors.
 * **Solid Minimalist Brand Identity**: Clean vector SVG monogram `AF` favicon.
 
