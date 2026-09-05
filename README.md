@@ -37,4 +37,4 @@ python -m http.server 3000
 Open `http://localhost:3000` in your browser.
 
 
-<!-- Last Maintenance Audit: 2026-08-30 -->
+<!-- Last Maintenance Audit: 2026-09-05 -->
