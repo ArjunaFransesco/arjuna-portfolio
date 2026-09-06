@@ -1,40 +1,19 @@
-# 📱 Arjuna Fransesco — iOS Liquid Glass Portfolio
+# Arjuna Fransesco — Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-007AFF?style=flat&logo=safari&logoColor=white)](https://arjunafransesco.github.io/arjuna-portfolio/)
-[![React 19](https://img.shields.io/badge/React-19.x-blue.svg)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v3.4-38B2AC.svg)](https://tailwindcss.com/)
-[![Vite](https://img.shields.io/badge/Bundler-Vite%207-646CFF.svg)](https://vitejs.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+Portfolio: https://arjunafransesco.github.io/arjuna-portfolio/
 
-> 🌐 **Live Website**: [https://arjunafransesco.github.io/arjuna-portfolio/](https://arjunafransesco.github.io/arjuna-portfolio/)
+The published site is the static `index.html` page. Styles and interactions live in `assets/portfolio.css` and `assets/portfolio.js`. Fonts and GSAP are served locally from `assets/vendor/`.
 
-An interactive, high-performance portfolio website built with **iOS Glassmorphism (VisionOS style)** and **Tailwind CSS**. Features real-time client-side ML model prediction playgrounds, interactive CLI terminals, haptic sound feedback, and structured career timeline exhibits.
+## Development
 
----
+Run `node server.cjs`, then open http://127.0.0.1:5173/.
 
-## 🌟 Key Features
+## Build and publish
 
-* **iOS Dynamic Island Header**: Real-time clock, online activity badge, audio haptic sound, and symmetrical theme toggle.
-* **Ultra-Smooth 60fps Theme Engine**: Hardware-accelerated View Transition API for instant, seamless dark/light mode switching.
-* **Interactive ML Playground**: Client-side customer churn risk simulator with live animated circular gauges.
-* **Interactive CLI Terminal**: Interactive web terminal executing commands (`help`, `cv`, `skills`, `exp`, `edu`, `contact`).
-* **Featured Projects Showcase**: Filterable showcase tabs across Machine Learning, Computer Vision, Time Series, and Data Engineering.
-* **iOS Floating Dock Navigation**: Frosted glass dock with smooth navigation anchors.
-* **Solid Minimalist Brand Identity**: Clean vector SVG monogram `AF` favicon.
+Run `npm run build` (no dependency installation required). The build checks local asset references and navigation anchors, then copies the public website to `dist/`.
 
----
+Pushing to `main` runs the GitHub Pages workflow and publishes `dist/` at the existing portfolio URL. The earlier React prototype in `src/` is retained but is not the published page.
 
-## 🚀 Quick Start
+## Content
 
-```bash
-# Clone the repository
-git clone https://github.com/ArjunaFransesco/arjuna-portfolio.git
-cd arjuna-portfolio
-
-# Run via local web server
-python -m http.server 3000
-```
-Open `http://localhost:3000` in your browser.
-
-
-<!-- Last Maintenance Audit: 2026-09-05 -->
+The portfolio includes 13 projects, work experience, education, skills, courses, contact links, a customer churn simulation, and a command terminal. Project filters and all essential content work independently of animation. Scroll animations respect reduced-motion preferences. The churn experiment is a weighted logistic simulation, not a trained predictive model.
