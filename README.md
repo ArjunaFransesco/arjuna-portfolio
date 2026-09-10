@@ -19,4 +19,4 @@ Pushing to `main` runs the GitHub Pages workflow and publishes `dist/` at the ex
 The portfolio includes 13 projects, work experience, education, skills, courses, contact links, a customer churn simulation, and a command terminal. Project filters and all essential content work independently of animation. Scroll animations respect reduced-motion preferences. The churn experiment is a weighted logistic simulation, not a trained predictive model.
 
 
-<!-- Last Maintenance Audit: 2026-09-08 -->
+<!-- Last Maintenance Audit: 2026-09-10 -->
