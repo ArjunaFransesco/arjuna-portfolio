@@ -70,25 +70,6 @@ document.getElementById('terminal-form').addEventListener('submit', event => {
 
 document.querySelectorAll('.certificates details').forEach(detail => detail.addEventListener('toggle', () => window.ScrollTrigger?.refresh()));
 
-const anitaMedia = document.querySelector('a.feature[href*="/anita-konveksi"] .feature-image');
-if (anitaMedia) {
-  const shots = [
-    ['dashboard-owner.jpg', 'Dashboard owner Anita Konveksi'],
-    ['dashboard-admin.jpg', 'Dashboard admin Anita Konveksi'],
-    ['monitoring-produksi.jpg', 'Monitoring produksi Anita Konveksi'],
-  ].map(([file, alt]) => {
-    const image = document.createElement('img');
-    image.src = `./assets/projects/anita/${file}`;
-    image.alt = alt;
-    image.loading = 'lazy';
-    image.decoding = 'async';
-    image.width = 1400;
-    image.height = 800;
-    return image;
-  });
-  anitaMedia.replaceChildren(...shots);
-}
-
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
   const motion = gsap.matchMedia();
