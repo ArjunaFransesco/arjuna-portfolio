@@ -69,20 +69,44 @@ document.getElementById('terminal-form').addEventListener('submit', event => {
 });
 
 document.querySelectorAll('.certificates details').forEach(detail => detail.addEventListener('toggle', () => window.ScrollTrigger?.refresh()));
+
+const anitaMedia = document.querySelector('a.feature[href*="/anita-konveksi"] .feature-image');
+if (anitaMedia) {
+  const shots = [
+    ['dashboard-owner.jpg', 'Dashboard owner Anita Konveksi'],
+    ['dashboard-admin.jpg', 'Dashboard admin Anita Konveksi'],
+    ['monitoring-produksi.jpg', 'Monitoring produksi Anita Konveksi'],
+  ].map(([file, alt]) => {
+    const image = document.createElement('img');
+    image.src = `./assets/projects/anita/${file}`;
+    image.alt = alt;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.width = 1400;
+    image.height = 800;
+    return image;
+  });
+  anitaMedia.replaceChildren(...shots);
+}
+
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
   const motion = gsap.matchMedia();
   motion.add('(min-width: 1001px) and (prefers-reduced-motion: no-preference)', () => {
     const features = gsap.utils.toArray('.feature');
-    features.forEach((feature, index) => {
-      if (index < features.length - 1) {
-        ScrollTrigger.create({ trigger: feature, start: 'top 80px', endTrigger: '.feature-gallery', end: 'bottom bottom', pin: true, pinSpacing: false });
-      }
+    features.forEach(feature => {
       const media = feature.querySelector('.feature-image');
-      gsap.fromTo(media, {scale: .8}, {scale: 1, ease: 'none', scrollTrigger: {trigger: feature, start: 'top bottom', end: 'top 35%', scrub: .6}});
-      if (index < features.length - 1) {
-        gsap.to(media, {opacity: .2, ease: 'none', scrollTrigger: {trigger: features[index + 1], start: 'top 65%', end: 'top 80px', scrub: .6}});
-      }
+      gsap.fromTo(media, {scale: .94}, {
+        scale: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: feature,
+          start: 'top bottom',
+          end: 'top 35%',
+          scrub: .6,
+          invalidateOnRefresh: true,
+        },
+      });
     });
   });
   document.fonts.ready.then(() => ScrollTrigger.refresh());
